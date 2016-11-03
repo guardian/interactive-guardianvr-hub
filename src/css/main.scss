@@ -45,7 +45,8 @@ h2 {
     &.gvr-strip--about {
         color: white;
         background-color: #b81b66;
-        background-image: url(https://placekitten.com/g/100/600);
+        background-image: url('<%= path %>/assets/vr.png');
+        background-size: auto 100%;
         background-position: left center;
         background-repeat: no-repeat;
     }
@@ -231,6 +232,7 @@ h2 {
 
 }
 .gvr-cols__item {
+    margin-top: 24px;
     @include mq(tablet) {
         width: 50%;
         box-sizing: border-box;
@@ -255,4 +257,8 @@ h2 {
     & > p {
         border-top: 1px solid #333;
     }
+}
+
+.gvr-about {
+    padding-left: 300px;
 }
