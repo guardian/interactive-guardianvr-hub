@@ -130,9 +130,12 @@ h2 {
 
 .gvr-header__title {
     @include f-sans;
-    font-weight: 200;
-    font-size: 75px;
     line-height: 1;
+    font-weight: 200;
+    font-size: 60px;
+    @include mq(tablet) {
+        font-size: 75px;
+    }
 }
 
 .gvr-how {

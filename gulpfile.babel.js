@@ -147,6 +147,10 @@ gulp.task('deploy', ['build'], cb => {
     });
 });
 
+gulp.task('url', () => {
+    console.log(`Atom URL: https://content.guardianapis.com/atom/interactive/${config.path}`);
+});
+
 gulp.task('atomise', ['build'], () => {
     return gulp.src('harness/*')
         .pipe(data(() => ({
