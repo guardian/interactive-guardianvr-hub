@@ -1,0 +1,255 @@
+@import "mq";
+@import "fonts";
+
+@mixin cf {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+.element-atom {
+    margin: 0 !important;
+}
+
+h2 {
+    @include fs-header(1);
+}
+
+.gvr-strip {
+    overflow-x: hidden;
+
+    &.gvr-strip--header {
+        color: white;
+        background-image: url(https://placekitten.com/1000/400);
+        background-size: cover;
+        height: 400px;
+    }
+
+    &.gvr-strip--how {
+        background-color: #44c5e0;
+    }
+
+    &.gvr-strip--6x9 {
+        background-color: grey;
+        height: 600px;
+    }
+
+    &.gvr-strip--underworld {
+        color: white;
+        background-color: #333;
+        height: 300px;
+    }
+
+    &.gvr-strip--about {
+        color: white;
+        background-color: #b81b66;
+        background-image: url(https://placekitten.com/g/100/600);
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+}
+
+.gvr-cf {
+    @include cf;
+}
+
+.gvr-big {
+    @include f-sans;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.1;
+}
+
+.gvr-content {
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    padding: 10px;
+    @include mq(mobileLandscape) {
+        padding: 20px;
+    }
+
+    @each $bp in (tablet, desktop, leftCol, wide) {
+        @include mq($bp) {
+            max-width: map-get($mq-breakpoints, $bp);
+        }
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2000px;
+        background-color: transparentize(white, 0.8);
+    }
+    &::before {
+        right: 100%;
+    }
+    &::after {
+        left: 100%;
+    }
+
+    &.gvr-content--no-sides {
+        &::before,
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.gvr-header {
+    height: 100%;
+    color: white;
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.gvr-header__text {
+    display: inline-block;
+    vertical-align: middle;
+    @include mq(tablet) {
+        margin-left: 40px;
+    }
+}
+
+.gvr-header__g {
+    @include fs-header(4);
+    & > span {
+        color: #7bc4de;
+    }
+}
+
+.gvr-header__title {
+    @include f-sans;
+    font-weight: 200;
+    font-size: 75px;
+    line-height: 1;
+}
+
+.gvr-how {
+    @include f-sans;
+    h2 {
+        font-family: inherit;
+        font-weight: normal;
+    }
+}
+
+.gvr-how__img {
+    float: left;
+    margin: -10px 40px -10px 0;
+    border-radius: 1000px;
+
+    display: none;
+    @include mq(tablet) {
+        display: block;
+    }
+}
+
+.gvr-vr {
+    position: relative;
+    height: 100%;
+}
+
+.gvr-vr__title,
+.gvr-vr__subtitle {
+    @include f-sans;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.gvr-vr__title {
+    font-weight: bold;
+}
+
+.gvr-vr__subtitle {
+    font-weight: 200;
+}
+
+.gvr-vr__description {
+    margin-top: 24px;
+}
+
+.gvr-vr__title,
+.gvr-vr__subtitle,
+.gvr-vr__description {
+    max-width: 420px;
+}
+
+.gvr-vr__extras {
+    @include cf;
+
+    @include mq(tablet) {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+}
+
+.gvr-vr__extras__left {
+    @include mq(tablet) {
+        float: left;
+        width: 60%;
+        padding-right: 40px;
+    }
+}
+
+.gvr-vr__extras__right {
+    @include mq(tablet) {
+        overflow: hidden;
+    }
+}
+
+.gvr-reading,
+.gvr-cols {
+    @include cf;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include mq(tablet) {
+        margin-right: -20px;
+    }
+
+}
+.gvr-cols__item {
+    @include mq(tablet) {
+        width: 50%;
+        box-sizing: border-box;
+        padding-right: 20px;
+        float: left;
+    }
+}
+
+.gvr-reading {
+    @include f-sans;
+    font-size: 15px;
+}
+
+.gvr-reading__item {
+    @include mq(tablet) {
+        width: (100% / 3);
+        box-sizing: border-box;
+        padding-right: 20px;
+        float: left;
+    }
+
+    & > p {
+        border-top: 1px solid #333;
+    }
+}

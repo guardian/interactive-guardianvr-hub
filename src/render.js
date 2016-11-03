@@ -1,3 +1,5 @@
+import mainTemplate from './src/templates/main.html!text'
+
 export function render() {
-    return '<div>bla</div>';
+    return mainTemplate;
 }
