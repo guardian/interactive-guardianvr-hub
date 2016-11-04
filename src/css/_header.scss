@@ -7,6 +7,7 @@
 }
 
 .gvr-header__inner {
+    font-size: 0;
     height: 100%;
     &::before {
         content: "";
@@ -44,6 +45,9 @@
 .gvr-header__logo {
     position: absolute;
     top: 20px;
-    right: 0;
     width: 60px;
+    right: 10px;
+    @include mq(tablet) {
+        right: 0;
+    }
 }
