@@ -1,25 +1,33 @@
 import config from './config.json'
 
-import fs from 'fs'
-
 import gulp from 'gulp'
+import gutil from 'gulp-util'
 import sourcemaps from 'gulp-sourcemaps'
 import sass from 'gulp-sass'
 import template from 'gulp-template'
 import file from 'gulp-file'
-import data from 'gulp-data';
 import s3 from 'gulp-s3-upload';
 import size from 'gulp-size'
 import webserver from 'gulp-webserver'
 
+import fs from 'fs'
 import del from 'del'
 import runSequence from 'run-sequence'
 import source from 'vinyl-source-stream'
 import buffer from 'vinyl-buffer'
-import merge from 'merge-stream'
 import inquirer from 'inquirer'
-
 import rollup from 'rollup-stream'
+
+const buildDir = '.build';
+const cdnUrl = 'https://interactive.guim.co.uk';
+
+const isDeploy = gutil.env._.indexOf('deploy') > -1;
+
+const version = `v/${Date.now()}`;
+const s3Path = `atoms/${config.path}`;
+const s3VersionPath = `${s3Path}/${version}`;
+const path = isDeploy ? `${cdnUrl}/${s3VersionPath}` : '.';
+
 // hack to use same presets for rollup, but with custom es2015
 const babelrc = JSON.parse(fs.readFileSync('.babelrc'));
 const presets = babelrc.presets.filter(p => p !== 'es2015');
@@ -40,21 +48,11 @@ const rollupPlugins = [
         'plugins': ['external-helpers'],
         'babelrc': false,
         'exclude': 'node_modules/**'
-    })
+    }),
+    isDeploy && require('rollup-plugin-uglify')()
 ];
 
-const buildDir = '.build';
-const cdnUrl = 'https://interactive.guim.co.uk';
-
-const isDeploy = process.argv[2] === 'deploy';
-
-const version = `v/${Date.now()}`;
-const s3Path = `atoms/${config.path}`;
-const s3VersionPath = `${s3Path}/${version}`;
-const path = isDeploy ? `${cdnUrl}/${s3VersionPath}` : '.';
-
 function buildJS(filename) {
-    // TODO: minification
     return () => {
         return rollup({
                 'entry': `./src/js/${filename}`,
@@ -92,7 +90,7 @@ gulp.task('build:css', () => {
         .pipe(template({path}))
         .pipe(sourcemaps.init())
         .pipe(sass({
-            'outputStyle': 'compressed'
+            'outputStyle': isDeploy ? 'compressed' : 'expanded'
         }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(buildDir));
@@ -111,7 +109,7 @@ gulp.task('build:html', cb => {
             .pipe(gulp.dest(buildDir))
             .on('end', cb);
     }).catch(err => {
-        console.log(err);
+        gutil.log(err);
     });
 });
 
@@ -148,10 +146,10 @@ gulp.task('deploy', ['build'], cb => {
 });
 
 gulp.task('url', () => {
-    console.log(`Atom URL: https://content.guardianapis.com/atom/interactive/${config.path}`);
+    gutil.log(gutil.colors.green(`Atom URL: https://content.guardianapis.com/atom/interactive/${config.path}`));
 });
 
-gulp.task('atomise', ['build'], () => {
+gulp.task('local', ['build'], () => {
     return gulp.src('harness/*')
         .pipe(template({
             'css': fs.readFileSync(`${buildDir}/main.css`),
@@ -161,9 +159,9 @@ gulp.task('atomise', ['build'], () => {
         .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('default', ['atomise'], () => {
-    gulp.watch('src/**/*', ['atomise']).on('change', evt => {
-        console.log(`File ${evt.path} was ${evt.type}`);
+gulp.task('default', ['local'], () => {
+    gulp.watch('src/**/*', ['local']).on('change', evt => {
+        gutil.log(`File ${evt.path} was ${evt.type}`);
     });
 
     gulp.src(buildDir).pipe(webserver());
