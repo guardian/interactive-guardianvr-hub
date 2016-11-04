@@ -83,7 +83,7 @@ function requireUncached(module) {
     return require(module);
 }
 
-gulp.task('clean', () => del(buildDir));
+gulp.task('clean', () => del(buildDir).then(del('.local')));
 
 gulp.task('build:css', () => {
     return gulp.src('src/css/*.scss')
@@ -162,10 +162,15 @@ gulp.task('atomise', ['build'], () => {
         .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('default', ['atomise'], () => {
+gulp.task('local', ['atomise'], () => {
+    return packageBuild('.')
+        .pipe(gulp.dest('.local'));
+});
+
+gulp.task('default', ['local'], () => {
     gulp.watch('src/**/*', ['atomise']).on('change', evt => {
         console.log(`File ${evt.path} was ${evt.type}`);
     });
 
-    gulp.src(buildDir).pipe(webserver());
+    gulp.src('.local').pipe(webserver());
 });
