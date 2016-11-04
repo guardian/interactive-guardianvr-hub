@@ -9,6 +9,9 @@
     }
 }
 
+@import "header";
+@import "vr";
+
 .element-atom {
     margin: 0 !important;
 }
@@ -20,19 +23,14 @@ h2 {
 .gvr-strip {
     overflow-x: hidden;
 
-    &.gvr-strip--header {
-        color: white;
-        background-image: url(https://placekitten.com/1000/400);
-        background-size: cover;
-        height: 400px;
-    }
-
     &.gvr-strip--how {
         background-color: #44c5e0;
     }
 
     &.gvr-strip--6x9 {
-        background-color: grey;
+        background-image: url(<%= path %>/assets/project_6x9.png);
+        background-size: cover;
+        background-position: center;
         height: 600px;
     }
 
@@ -46,7 +44,7 @@ h2 {
         color: white;
         background-color: #b81b66;
         @include mq(desktop) {
-            background-image: url('<%= path %>/assets/vr.png');
+            background-image: url(<%= path %>/assets/vr.png);
             background-size: auto 100%;
             background-position: left center;
             background-repeat: no-repeat;
@@ -60,12 +58,16 @@ h2 {
 
 .gvr-big {
     @include f-sans;
-    font-size: 30px;
     font-weight: 200;
     line-height: 1.1;
+    font-size: 32px;
+    @include mq(tablet) {
+        font-size: 40px;
+    }
 }
 
-.gvr-content {
+.gvr-content,
+.gvr-header__inner {
     position: relative;
     margin: 0 auto;
     box-sizing: border-box;
@@ -80,7 +82,9 @@ h2 {
             max-width: map-get($mq-breakpoints, $bp);
         }
     }
+}
 
+.gvr-content {
     &::before,
     &::after {
         content: "";
@@ -96,49 +100,6 @@ h2 {
     &::after {
         left: 100%;
     }
-
-    &.gvr-content--no-sides {
-        &::before,
-        &::after {
-            display: none;
-        }
-    }
-}
-
-.gvr-header {
-    height: 100%;
-    color: white;
-    &::before {
-        content: "";
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-    }
-}
-
-.gvr-header__text {
-    display: inline-block;
-    vertical-align: middle;
-    @include mq(tablet) {
-        margin-left: 40px;
-    }
-}
-
-.gvr-header__g {
-    @include fs-header(4);
-    & > span {
-        color: #7bc4de;
-    }
-}
-
-.gvr-header__title {
-    @include f-sans;
-    line-height: 1;
-    font-weight: 200;
-    font-size: 60px;
-    @include mq(tablet) {
-        font-size: 75px;
-    }
 }
 
 .gvr-how {
@@ -153,70 +114,12 @@ h2 {
     float: left;
     margin: -10px 40px -10px 0;
     border-radius: 1000px;
+    background-color: #43b4d3;
+    height: 200px;
 
     display: none;
     @include mq(tablet) {
         display: block;
-    }
-}
-
-.gvr-vr {
-    position: relative;
-    height: 100%;
-}
-
-.gvr-vr__title,
-.gvr-vr__subtitle {
-    @include f-sans;
-    font-size: 36px;
-    line-height: 1;
-}
-
-.gvr-vr__title {
-    font-weight: bold;
-}
-
-.gvr-vr__subtitle {
-    font-weight: 200;
-}
-
-.gvr-vr__description {
-    margin-top: 24px;
-}
-
-.gvr-vr__title,
-.gvr-vr__subtitle,
-.gvr-vr__description {
-    max-width: 420px;
-}
-
-.gvr-vr__extras {
-    @include cf;
-
-    @include mq(tablet) {
-        position: absolute;
-        left: 20px;
-        right: 20px;
-        bottom: 20px;
-
-    }
-
-    h2 {
-        margin-bottom: 12px;
-    }
-}
-
-.gvr-vr__extras__left {
-    @include mq(tablet) {
-        float: left;
-        width: 60%;
-        padding-right: 40px;
-    }
-}
-
-.gvr-vr__extras__right {
-    @include mq(tablet) {
-        overflow: hidden;
     }
 }
 

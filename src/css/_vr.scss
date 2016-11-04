@@ -1,0 +1,59 @@
+.gvr-vr {
+    position: relative;
+    height: 100%;
+}
+
+.gvr-vr__title,
+.gvr-vr__subtitle {
+    @include f-sans;
+    font-size: 36px;
+    line-height: 1;
+}
+
+.gvr-vr__title {
+    font-weight: bold;
+}
+
+.gvr-vr__subtitle {
+    font-weight: 200;
+}
+
+.gvr-vr__description {
+    margin-top: 24px;
+}
+
+.gvr-vr__title,
+.gvr-vr__subtitle,
+.gvr-vr__description {
+    max-width: 420px;
+}
+
+.gvr-vr__extras {
+    @include cf;
+
+    @include mq(tablet) {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+
+    }
+
+    h2 {
+        margin-bottom: 12px;
+    }
+}
+
+.gvr-vr__extras__left {
+    @include mq(tablet) {
+        float: left;
+        width: 60%;
+        padding-right: 40px;
+    }
+}
+
+.gvr-vr__extras__right {
+    @include mq(tablet) {
+        overflow: hidden;
+    }
+}

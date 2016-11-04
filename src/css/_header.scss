@@ -1,0 +1,49 @@
+.gvr-header {
+    position: relative;
+    color: white;
+    background-image: url(https://placekitten.com/1000/400);
+    background-size: cover;
+    height: 400px;
+}
+
+.gvr-header__inner {
+    height: 100%;
+    &::before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+}
+
+.gvr-header__text {
+    display: inline-block;
+    vertical-align: middle;
+    @include mq(tablet) {
+        margin-left: 40px;
+    }
+}
+
+.gvr-header__g {
+    @include fs-header(4);
+    & > span {
+        color: #7bc4de;
+    }
+}
+
+.gvr-header__title {
+    @include f-sans;
+    line-height: 1;
+    font-weight: 200;
+    font-size: 60px;
+    @include mq(tablet) {
+        font-size: 75px;
+    }
+}
+
+.gvr-header__logo {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 60px;
+}
