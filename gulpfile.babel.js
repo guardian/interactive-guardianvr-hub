@@ -46,6 +46,13 @@ const rollupPlugins = [
 const buildDir = '.build';
 const cdnUrl = 'https://interactive.guim.co.uk';
 
+const isDeploy = process.argv[2] === 'deploy';
+
+const version = `v/${Date.now()}`;
+const s3Path = `atoms/${config.path}`;
+const s3VersionPath = `${s3Path}/${version}`;
+const path = isDeploy ? `${cdnUrl}/${s3VersionPath}` : '.';
+
 function buildJS(filename) {
     // TODO: minification
     return () => {
@@ -57,16 +64,11 @@ function buildJS(filename) {
             })
             .pipe(source(filename, './src/js'))
             .pipe(buffer())
+            .pipe(template({path}))
             .pipe(sourcemaps.init({'loadMaps': true}))
             .pipe(sourcemaps.write('.'))
             .pipe(gulp.dest(buildDir));
     }
-}
-
-function packageBuild(path) {
-    let stream1 = gulp.src(`${buildDir}/**/*.@(css|js|html)`).pipe(template({path}));
-    let stream2 = gulp.src(`${buildDir}/**/*.!(css|js|html)`);
-    return merge(stream1, stream2);
 }
 
 function s3Upload(cacheControl, keyPrefix) {
@@ -83,10 +85,11 @@ function requireUncached(module) {
     return require(module);
 }
 
-gulp.task('clean', () => del(buildDir).then(del('.local')));
+gulp.task('clean', () => del(buildDir));
 
 gulp.task('build:css', () => {
     return gulp.src('src/css/*.scss')
+        .pipe(template({path}))
         .pipe(sourcemaps.init())
         .pipe(sass({
             'outputStyle': 'compressed'
@@ -104,6 +107,7 @@ gulp.task('build:html', cb => {
 
     Promise.resolve(render()).then(html => {
         file('main.html', html, {'src': true})
+            .pipe(template({path}))
             .pipe(gulp.dest(buildDir))
             .on('end', cb);
     }).catch(err => {
@@ -126,17 +130,13 @@ gulp.task('build', ['_build'], () => {
 });
 
 gulp.task('deploy', ['build'], cb => {
-    let version = `v/${Date.now()}`;
-    let s3Path = `atoms/${config.path}`;
-    let s3VersionPath = `${s3Path}/${version}`;
-
     inquirer.prompt({
         type: 'list',
         name: 'env',
         message: 'Where would you like to deploy to?',
         choices: ['preview', 'live']
     }).then(res => {
-        packageBuild(`${cdnUrl}/${s3VersionPath}`)
+        gulp.src(`${buildDir}/**/*`)
             .pipe(s3Upload('max-age=31536000', s3VersionPath))
             .on('end', () => {
                 gulp.src('config.json')
@@ -153,24 +153,18 @@ gulp.task('url', () => {
 
 gulp.task('atomise', ['build'], () => {
     return gulp.src('harness/*')
-        .pipe(data(() => ({
+        .pipe(template({
             'css': fs.readFileSync(`${buildDir}/main.css`),
             'html': fs.readFileSync(`${buildDir}/main.html`),
             'js': fs.readFileSync(`${buildDir}/main.js`)
-        })))
-        .pipe(template())
+        }))
         .pipe(gulp.dest(buildDir));
 });
 
-gulp.task('local', ['atomise'], () => {
-    return packageBuild('.')
-        .pipe(gulp.dest('.local'));
-});
-
-gulp.task('default', ['local'], () => {
+gulp.task('default', ['atomise'], () => {
     gulp.watch('src/**/*', ['atomise']).on('change', evt => {
         console.log(`File ${evt.path} was ${evt.type}`);
     });
 
-    gulp.src('.local').pipe(webserver());
+    gulp.src(buildDir).pipe(webserver());
 });
