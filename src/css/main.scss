@@ -45,10 +45,12 @@ h2 {
     &.gvr-strip--about {
         color: white;
         background-color: #b81b66;
-        background-image: url('<%= path %>/assets/vr.png');
-        background-size: auto 100%;
-        background-position: left center;
-        background-repeat: no-repeat;
+        @include mq(desktop) {
+            background-image: url('<%= path %>/assets/vr.png');
+            background-size: auto 100%;
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
     }
 }
 
@@ -260,5 +262,7 @@ h2 {
 }
 
 .gvr-about {
-    padding-left: 300px;
+    @include mq(desktop) {
+        padding-left: 300px;
+    }
 }
