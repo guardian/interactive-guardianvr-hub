@@ -3,9 +3,25 @@
     color: white;
     background-image: url(https://placekitten.com/1000/400);
     background-size: cover;
-    height: 400px;
+    height: 600px;
+    overflow: hidden;
 }
 
+.gvr-header__background{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    video{
+        min-width:100%;
+        min-height:100%;
+        top:50%;
+        left:50%;
+        position:absolute;
+        transform:translate(-50%,-50%)
+    }
+}
 .gvr-header__inner {
     font-size: 0;
     height: 100%;
@@ -20,9 +36,6 @@
 .gvr-header__text {
     display: inline-block;
     vertical-align: middle;
-    @include mq(tablet) {
-        margin-left: 40px;
-    }
 }
 
 .gvr-header__g {

@@ -1,4 +1,7 @@
 <div class="gvr-header">
+    <div class="gvr-header__background">
+        <video src="<%= path %>/assets/header_video.mp4" autoplay muted></video>
+    </div>
     <div class="gvr-header__inner">
         <div class="gvr-header__text">
             <h2 class="gvr-header__g">theguardian<span>vr</span></h2>
@@ -9,7 +12,7 @@
 </div>
 <div class="gvr-strip gvr-strip--how">
     <div class="gvr-content gvr-how">
-        <img class="gvr-how__img" src="<%= path %>/assets/illo.png" />
+        <img class="gvr-how__img" src="<%= path %>/assets/gvr-illo.png" />
         <h2>How to watch</h2>
         <p class="gvr-big">
             You can watch the Guardian's virtual reality projects. Use
@@ -18,17 +21,20 @@
         <div class="gvr-cf"></div>
     </div>
 </div>
-<div class="gvr-strip gvr-strip--6x9">
+<div class="gvr-strip gvr-strip--project gvr-strip--6x9 gvr-strip--active">
     <div class="gvr-content gvr-vr">
         <h2 class="gvr-vr__title">6&times;9</h2>
         <h3 class="gvr-vr__subtitle">
             A virtual experience of solitary confinement
         </h3>
+        <button class="gvr-vr__expandbtn">Explore</button>
         <p class="gvr-vr__description">
             More than 80,000 people are in solitary confinement in the
             US. They spend 22 to 24 hours a day in their cells, with little
             to no human contact for days &mdash; or even decades
         </p>
+        <button class="gvr-vr__trailerbtn">Play trailer</button>
+        <button class="gvr-vr__previewbtn">Watch the preview</button>
         <div class="gvr-vr__extras">
             <div class="gvr-vr__extras__left">
                 <h2>Further reading</h2>
@@ -53,18 +59,16 @@
                     </li>
                 </ul>
             </div>
-            <div class="gvr-vr__extras__right">
-                <h2>Download the app</h2>
-            </div>
         </div>
     </div>
 </div>
-<div class="gvr-strip gvr-strip--underworld">
+<div class="gvr-strip gvr-strip--project gvr-strip--underworld">
     <div class="gvr-content gvr-vr">
         <h2 class="gvr-vr__title">Underworld</h2>
         <h3 class="gvr-vr__subtitle">
             A virtual exploration of London's sewers
         </h3>
+        <button class="gvr-vr__expandbtn">Explore</button>
     </div>
 </div>
 <div class="gvr-strip gvr-strip--about">
@@ -77,7 +81,7 @@
         </p>
         <ul class="gvr-cols">
             <li class="gvr-cols__item">
-                <h2>What is VR?</h2>
+                <h3>What is VR?</h3>
                 <p>
                     Virtual Reality (VR) is the use of computer technology
                     to create a simulated environment. Unlike traditional
@@ -87,7 +91,7 @@
                 </p>
             </li>
             <li class="gvr-cols__item">
-                <h2>What is VR?</h2>
+                <h3>What is VR?</h3>
                 <p>
                     Virtual Reality (VR) is the use of computer technology
                     to create a simulated environment. Unlike traditional
@@ -97,7 +101,7 @@
                 </p>
             </li>
             <li class="gvr-cols__item">
-                <h2>What is VR?</h2>
+                <h3>What is VR?</h3>
                 <p>
                     Virtual Reality (VR) is the use of computer technology
                     to create a simulated environment. Unlike traditional
@@ -107,7 +111,7 @@
                 </p>
             </li>
             <li class="gvr-cols__item">
-                <h2>What is VR?</h2>
+                <h3>What is VR?</h3>
                 <p>
                     Virtual Reality (VR) is the use of computer technology
                     to create a simulated environment. Unlike traditional

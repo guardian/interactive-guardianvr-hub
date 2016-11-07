@@ -1,6 +1,10 @@
 @import "mq";
 @import "fonts";
 
+$gvrPurple : #3F2961;
+$gvrBlue : #4BC6DF;
+$gvrPink : #C34A85;
+
 @mixin cf {
     &::after {
         content: "";
@@ -15,29 +19,71 @@
 .element-atom {
     margin: 0 !important;
 }
+button{
+    background:#333;
+    color:#fff;
+    border:none;    
+    border-radius:999px;
+    height:36px;
+    @include f-sans;
+    display: inline-block;
+}
 
 h2 {
-    @include fs-header(1);
+    font-size:24px;
+    font-family: "Guardian Egyptian Web", Georgia, serif;
+    line-height:1em;
+
+    @include mq(tablet){
+        font-size:30px;
+    }
 }
+
 
 .gvr-strip {
     overflow-x: hidden;
+   
+
+     &.gvr-strip--project {
+        .gvr-content{
+           min-height:300px; 
+        }
+        
+    }
 
     &.gvr-strip--how {
         background-color: #44c5e0;
+        @include mq(desktop){
+            overflow: visible;
+        }
     }
 
     &.gvr-strip--6x9 {
         background-image: url(<%= path %>/assets/project_6x9.png);
         background-size: cover;
         background-position: center;
-        height: 600px;
+        position: relative;
+        &:before{
+            position: absolute;
+            content:'';
+            display:block;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            background:rgba(255,255,255,0.5)
+        }
     }
 
     &.gvr-strip--underworld {
         color: white;
         background-color: #333;
-        height: 300px;
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url(assets/icon_plus-black.svg)
+        }
     }
 
     &.gvr-strip--about {
@@ -49,6 +95,20 @@ h2 {
             background-position: left center;
             background-repeat: no-repeat;
         }
+        h3{
+            font-size:21px;
+            font-family: "Guardian Egyptian Web", Georgia, serif;
+            line-height:1em;
+            font-weight:bold;
+            margin-top:30px;
+            margin-bottom:9px;
+        }
+    }
+
+    &.gvr-strip--active{
+        .gvr-vr__expandbtn{
+            display:none;
+        }  
     }
 }
 
@@ -59,10 +119,11 @@ h2 {
 .gvr-big {
     @include f-sans;
     font-weight: 200;
-    line-height: 1.1;
-    font-size: 32px;
+    line-height: 39px;
+    font-size: 36px;
     @include mq(tablet) {
-        font-size: 40px;
+        font-size: 42px;
+        line-height:48px;
     }
 }
 
@@ -72,7 +133,7 @@ h2 {
     margin: 0 auto;
     box-sizing: border-box;
 
-    padding: 10px;
+    padding: 12px 10px;
     @include mq(mobileLandscape) {
         padding: 20px;
     }
@@ -103,23 +164,35 @@ h2 {
 }
 
 .gvr-how {
+    padding-bottom:30px;
+    color:$gvrPurple;
     @include f-sans;
-    h2 {
-        font-family: inherit;
-        font-weight: normal;
+    @include mq(tablet){
+        padding-bottom:48px;
     }
+    @include mq(desktop){
+        .gvr-big{
+            margin-right:280px;
+        }
+    }
+    
 }
 
 .gvr-how__img {
-    float: left;
-    margin: -10px 40px -10px 0;
-    border-radius: 1000px;
-    background-color: #43b4d3;
-    height: 200px;
+    position: absolute;
+    bottom:0;
+    right:0;
+    width:180px;
+    opacity:0.4;
 
-    display: none;
     @include mq(tablet) {
-        display: block;
+        width:200px;
+        right:20px;
+    }
+    @include mq(desktop) {
+        width:280px;
+        right:20px;
+        opacity:1;
     }
 }
 
@@ -152,20 +225,34 @@ h2 {
 }
 
 .gvr-reading__item {
+    line-height:1em;
+    & > p {
+        border-top: 1px solid #333;
+        padding-top:3px;
+        margin-bottom:12px;
+    }
     @include mq(tablet) {
         width: (100% / 3);
+        max-width:240px;
         box-sizing: border-box;
         padding-right: 20px;
         float: left;
     }
-
-    & > p {
-        border-top: 1px solid #333;
+    @include mq(leftCol){
+        width:320px;
+        max-width:none;
+        font-size:18px;
+        & > p{
+            margin-bottom:18px;
+        }
     }
 }
 
 .gvr-about {
     @include mq(desktop) {
-        padding-left: 300px;
+        padding-left: 260px;
+    }
+     @include mq(leftCol) {
+        padding-left: 340px;
     }
 }
