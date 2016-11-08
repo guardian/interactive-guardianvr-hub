@@ -25,8 +25,10 @@ button{
     border:none;    
     border-radius:999px;
     height:36px;
+    outline:none;
     @include f-sans;
     display: inline-block;
+    cursor:pointer;
 }
 
 h2 {
@@ -45,16 +47,124 @@ h2 {
    
 
      &.gvr-strip--project {
-        .gvr-content{
-           min-height:300px; 
-           max-height:300px;
-           will-change:max-height;
+        position: relative;
+        .gvr-project--container{
+            min-height:300px; 
+            max-height:300px;
+            overflow: hidden;
+            will-change:max-height;
         }
         
         .gvr-vr__extras,.gvr-vr__trailerbtn,.gvr-vr__previewbtn,.gvr-vr__description{
             display:none;
         }
     }
+
+    .gvr-lightbox__container{
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        background:rgba(0,0,0,0.8); 
+
+        .gvr-lightbox__video{
+            max-width:300px;
+            width:100%;
+            background:#333;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            display: none;
+            .gvr-video__container{
+                width:100%;
+                padding-bottom:56.25%;
+            }
+            iframe{
+                width:100%;
+                height:100%;
+                position: absolute;
+                top:0;
+                left:0;
+            }
+            @include mq(tablet){
+                max-width:480px;
+            }
+            @include mq(desktop){
+                max-width:620px;
+            }
+            @include mq(leftCol){
+                max-width:780px;
+            }
+            @include mq(wide){
+                max-width:940px;
+            }
+        }
+        .gvr-lightbox__close{
+            width:40px;
+            height:40px;
+            background:#ccc;
+            border-radius:20px;
+            position: absolute;
+            top:-50px;
+            right:0;
+            cursor:pointer;
+        }
+
+        @media(min-width:620px){
+            position:absolute;
+            .gvr-lightbox__close{
+                top:0;
+                right:-50px;
+            }
+        }
+    }
+    &:not(.gvr-strip--trailerplaying){
+        .gvr-lightbox__container{
+            animation:hideTrailer 200ms linear;
+            visibility: hidden;
+            opacity:0;
+            
+        }
+    }
+    &.gvr-strip--trailerplaying{
+        .gvr-lightbox__container{
+            visibility: visible;
+            opacity:1;
+            animation:revealTrailer 200ms linear;
+            .gvr-lightbox__video{
+                display:block;
+            }
+        }
+    }
+
+    @keyframes revealTrailer{
+        0%{
+            display:block;
+            opacity:0;
+        }
+        100%{
+            opacity:1;
+        }
+    }
+
+    @keyframes hideTrailer{
+        0%{
+            visibility: visible;
+            opacity:1;
+        }
+        99%{
+            visibility: visible;
+            opacity:0;
+            
+        }
+        100%{
+            visibility: hidden;
+        }
+    }
+
+
 
     &.gvr-strip--how {
         background-color: #44c5e0;
@@ -103,29 +213,28 @@ h2 {
         h3{
             font-size:21px;
             font-family: "Guardian Egyptian Web", Georgia, serif;
-            line-height:1em;
+            line-height:24px;
             font-weight:bold;
             margin-top:30px;
             margin-bottom:9px;
         }
     }
 
-    &.gvr-strip--active{
+    &.gvr-strip--project.gvr-strip--active{
         .gvr-vr__expandbtn{
             display:none;
         }  
         .gvr-vr__extras,.gvr-vr__description{
             display:block;
-            animation: stripReveal 1s linear;
+            // animation: stripReveal 1s linear;
         }
         .gvr-vr__trailerbtn,.gvr-vr__previewbtn{
             display:inline-block;
-            animation: stripRevealButtons 1s linear;
+            // animation: stripRevealButtons 1s linear;
         }
-        .gvr-content{
-            max-height:800px;
-            overflow:hidden;
-            animation: stripExpand 1s linear;
+        .gvr-project--container{
+            max-height:none;
+            // animation: stripExpand 1s linear;
         }
     }
 }
@@ -138,6 +247,30 @@ h2 {
         max-height:800px;
     }
 }
+
+@keyframes stripShrink{
+    0%{
+        max-height:800px;
+    }
+    60%{
+        max-height:300px;
+    }
+}
+
+@keyframes stripHide{
+    0%{
+        display:block;
+        opacity:1;
+    }
+    30%{
+        opacity:1;
+    }
+    80%{
+        opacity:0;
+        display:none;
+    }
+}
+
 @keyframes stripReveal{
     0%{
         display:block;
@@ -186,7 +319,7 @@ h2 {
 
     padding: 12px 10px;
     @include mq(mobileLandscape) {
-        padding: 20px;
+        padding: 18px 20px;
     }
 
     @each $bp in (tablet, desktop, leftCol, wide) {
@@ -246,7 +379,12 @@ h2 {
         opacity:1;
     }
 }
-
+.faq-container{
+    overflow: hidden;
+    @include mq(tablet){
+        margin-top:60px;
+    }
+}
 .gvr-reading,
 .gvr-cols {
     @include cf;
@@ -258,15 +396,31 @@ h2 {
     @include mq(tablet) {
         margin-right: -20px;
     }
-
 }
+
+.gvr-cols{
+    @include mq(tablet) {
+        float:left;
+        width:50%;
+        margin-right:0;
+    }
+}
+
 .gvr-cols__item {
     margin-top: 24px;
     @include mq(tablet) {
-        width: 50%;
-        box-sizing: border-box;
-        padding-right: 20px;
-        float: left;
+        padding-right:20px;
+        &:first-child{
+            margin-top:0;
+            h3{
+                margin-top:0;
+            }
+        }
+    }
+    @include mq(leftCol){
+        p{
+            font-size:18px;
+        }
     }
 }
 
@@ -277,10 +431,17 @@ h2 {
 
 .gvr-reading__item {
     line-height:1em;
-    & > p {
-        border-top: 1px solid #333;
+    & > a {
+        border-top: 1px solid;
         padding-top:3px;
         margin-bottom:12px;
+        color:inherit;
+        display: inline-block;
+        text-decoration: none;
+        width:100%;
+        &:hover{
+            text-decoration: underline;
+        }
     }
     @include mq(tablet) {
         width: (100% / 3);
@@ -293,8 +454,9 @@ h2 {
         width:320px;
         max-width:none;
         font-size:18px;
-        & > p{
-            margin-bottom:18px;
+        line-height:21px;
+        & > a{
+            margin-bottom:24px;
         }
     }
 }

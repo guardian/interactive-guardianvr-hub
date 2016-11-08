@@ -1,11 +1,15 @@
 <div class="gvr-header">
     <div class="gvr-header__background">
-        <video src="<%= path %>/assets/header_video.mp4" autoplay muted></video>
+        <video src="<%= path %>/assets/out.webm" autoplay muted></video>
     </div>
     <div class="gvr-header__inner">
         <div class="gvr-header__text">
             <h2 class="gvr-header__g">theguardian<span>vr</span></h2>
-            <h1 class="gvr-header__title">step inside the story</h1>
+            <h1 class="gvr-header__title">
+                <span>S</span><span>e</span><span>e</span> 
+                <span>t</span><span>h</span><span>e</span> 
+                <span>w</span><span>o</span><span>r</span><span>l</span><span>d</span>
+            </h1>
         </div>
         <img class="gvr-header__logo" src="<%= path %>/assets/logo.png" />
     </div>
@@ -21,54 +25,101 @@
         <div class="gvr-cf"></div>
     </div>
 </div>
-<div class="gvr-strip gvr-strip--project gvr-strip--6x9 gvr-strip--active">
+<div class="gvr-strip gvr-strip--project gvr-strip--underworld gvr-strip--active">
     <div class="gvr-content gvr-vr">
-        <h2 class="gvr-vr__title">6&times;9</h2>
-        <h3 class="gvr-vr__subtitle">
-            A virtual experience of solitary confinement
-        </h3>
-        <button class="gvr-vr__expandbtn">Explore</button>
-        <p class="gvr-vr__description">
-            More than 80,000 people are in solitary confinement in the
-            US. They spend 22 to 24 hours a day in their cells, with little
-            to no human contact for days &mdash; or even decades
-        </p>
-        <button class="gvr-vr__trailerbtn">Play trailer</button>
-        <button class="gvr-vr__previewbtn">Watch the preview</button>
-        <div class="gvr-vr__extras">
-            <div class="gvr-vr__extras__left">
-                <h2>Further reading</h2>
-                <ul class="gvr-reading">
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                    <li class="gvr-reading__item">
-                        <p>The men who keep London's sewers going</p>
-                    </li>
-                </ul>
+        <div class="gvr-project--container">
+            <h2 class="gvr-vr__title">Underworld</h2>
+            <h3 class="gvr-vr__subtitle">
+                A virtual exploration of London's sewers
+            </h3>
+            <button class="gvr-vr__expandbtn">Explore</button>
+            <p class="gvr-vr__description">
+                Guided by urban explorer and geographer Bradley Garrett, Underworld takes on a journey through the subterranean labyrinth of London’s Victorian sewers. The experience begins in one of London’s lost waterways - the old river Fleet - in the blood sewers underneath Smithfield meat market and continues down to the floodgates of the River Thames.
+            </p>
+            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/hwbJLlbeAS0?autoplay=1&controls=0&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
+            <button class="gvr-vr__previewbtn">Interactive preview</button>
+            <div class="gvr-vr__extras">
+                <div class="gvr-vr__extras__left">
+                    <h2>Further reading</h2>
+                    <ul class="gvr-reading">
+                        <li class="gvr-reading__item">
+                            <a href="https://gu.com/p/5625n">The complete guide to virtual reality - everything you need to get started</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://gu.com/p/547jk">My life as an urban explorer by Bradley Garrett - podcast</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://gu.com/p/5aqfm">The men who flush the sewers by David Levene -  picture gallery</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="#">The battle between urban explorers</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="#">Super sewer news story</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://gu.com/p/58g39">Rats, fatbergs and flooding: a day in the life of a sewer technician</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+   <div class="gvr-lightbox__container">
+        <div class="gvr-lightbox__video">
+            <div class="gvr-video__container">
+                <iframe allowfullscreen="1" frameborder="0"></iframe>
+            </div>
+            <div class="gvr-lightbox__close"></div>
+        </div>
+    </div>
 </div>
-<div class="gvr-strip gvr-strip--project gvr-strip--underworld">
+<div class="gvr-strip gvr-strip--project gvr-strip--6x9">
     <div class="gvr-content gvr-vr">
-        <h2 class="gvr-vr__title">Underworld</h2>
-        <h3 class="gvr-vr__subtitle">
-            A virtual exploration of London's sewers
-        </h3>
-        <button class="gvr-vr__expandbtn">Explore</button>
+        <div class="gvr-project--container">
+            <h2 class="gvr-vr__title">6&times;9</h2>
+            <h3 class="gvr-vr__subtitle">
+                A virtual experience of solitary confinement
+            </h3>
+            <button class="gvr-vr__expandbtn">Explore</button>
+            <p class="gvr-vr__description">
+                More than 80,000 people are in solitary confinement in the US. They spend 22 to 24 hours a day in their cells, with little to no human contact for days - or even decades. We invite you into this world to hear the stories and experience the psychological damage that can happen during extreme isolation.
+            </p>
+            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/hwbJLlbeAS0?autoplay=1&controls=0&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
+            <div class="gvr-vr__extras">
+                <div class="gvr-vr__extras__left">
+                    <h2>Further reading</h2>
+                    <ul class="gvr-reading">
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/world/ng-interactive/2016/apr/27/you-start-seeing-figures-in-the-paint-chips-recollections-of-life-in-solitary-confinement">Six men and one woman share their experiences of solitary confinement</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/world/2016/apr/27/what-is-solitary-confinement">Solitary confinement: the facts</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/world/audio/2016/apr/27/solitary-confinement-in-the-us-audio-documentary">Podcast: 6x9, a story of solitary confinement by Gary Younge</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/world/2016/apr/29/albert-woodfox-43-years-solitary-confinement-wish-i-was-back">43 years in solitary: 'There are moments I wish I was back there’</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/us-news/audio/2016/apr/28/solitary-confinement-6x9-the-psychologists-the-story-podcast">Podcast: Psychologists discuss solitary confinement</a>
+                        </li>
+                        <li class="gvr-reading__item">
+                            <a href="https://www.theguardian.com/commentisfree/video/2016/may/04/i-was-alone-in-a-room-for-three-years-solitary-confinement-is-torture-video">Video: I was alone in a room for three years. Solitary confinement is torture</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gvr-lightbox__container">
+        <div class="gvr-lightbox__video">
+            <div class="gvr-video__container">
+                <iframe allowfullscreen="1" frameborder="0"></iframe>
+            </div>
+            <div class="gvr-lightbox__close"></div>
+        </div>
     </div>
 </div>
 <div class="gvr-strip gvr-strip--about">
@@ -79,47 +130,47 @@
             reality story without fear of where virtual stories might
             take us.
         </p>
+        <div class="faq-container">
         <ul class="gvr-cols">
             <li class="gvr-cols__item">
-                <h3>What is VR?</h3>
+                <h3>What is virtual reality (VR)?</h3>
                 <p>
-                    Virtual Reality (VR) is the use of computer technology
-                    to create a simulated environment. Unlike traditional
-                    user interfaces, VR places the user inside an experience.
-                    Instead of viewing a screen in front of them, users are
-                    immersed and able to interactive with 3D worlds.
+                    Virtual reality immerses you in a 360-degree environment. In order to experience virtual reality, you will need a headset specifically designed for that purpose. The terms “360” and “virtual reality” are often used interchangeably, but there are important differences. 360-degree photos and videos are panoramic pictures and videos – you can turn your head to look around you in all directions, but you are not able to interact with your environment. Virtual reality allows you interaction within these worlds.
                 </p>
             </li>
             <li class="gvr-cols__item">
-                <h3>What is VR?</h3>
+                <h3>How can I watch 360 and virtual reality?</h3>
                 <p>
-                    Virtual Reality (VR) is the use of computer technology
-                    to create a simulated environment. Unlike traditional
-                    user interfaces, VR places the user inside an experience.
-                    Instead of viewing a screen in front of them, users are
-                    immersed and able to interactive with 3D worlds.
+                    You can experience both on headsets such as Google’s Daydream View, Samsung Gear VR, Oculus Rift and HTC Vive. You can use Google Cardboard to watch 360. Read our complete guide to virtual reality here. [LINK HERE]
                 </p>
             </li>
             <li class="gvr-cols__item">
-                <h3>What is VR?</h3>
+                <h3>How do I experience Underworld?</h3>
                 <p>
-                    Virtual Reality (VR) is the use of computer technology
-                    to create a simulated environment. Unlike traditional
-                    user interfaces, VR places the user inside an experience.
-                    Instead of viewing a screen in front of them, users are
-                    immersed and able to interactive with 3D worlds.
-                </p>
-            </li>
-            <li class="gvr-cols__item">
-                <h3>What is VR?</h3>
-                <p>
-                    Virtual Reality (VR) is the use of computer technology
-                    to create a simulated environment. Unlike traditional
-                    user interfaces, VR places the user inside an experience.
-                    Instead of viewing a screen in front of them, users are
-                    immersed and able to interactive with 3D worlds.
+                   The Guardian’s latest virtual reality experience, Underworld, an exploration of London’s subterranean sewers, can currently only be experienced on Daydream View. Daydream View is Google’s virtual reality headset and controller powered by any Daydream-ready phone, such as the new Google Pixel. You insert the phone into the headset and use the controller to navigate. It will be available on the Guardian’s VR app from 10 November 2016 on Google Play. 
                 </p>
             </li>
         </ul>
+        <ul class="gvr-cols">
+            <li class="gvr-cols__item">
+                <h3>How do I experience 6x9?</h3>
+                <p>
+                   The Guardian’s solitary confinement experience 6x9 can be viewed on Daydream View, Samsung Gear VR and Cardboard. To watch on Samsung Gear VR, you will need a Samsung phone and headset. Google Cardboard is an inexpensive set of goggles made from cardboard, with plastic lenses. To watch 6x9, you must insert your Android or iOS smartphone into the Cardboard. The 6x9 app requires Android version 4.1 or higher, or iOS version 9.0 or higher. You can order Cardboard online here. There are more details on how to watch 6x9 here.
+                </p>
+            </li>
+            <li class="gvr-cols__item">
+                <h3>I don’t have a VR headset. Can I still experience 6x9 and Underworld on my smartphone?</h3>
+                <p>
+                    6x9 can be viewed without a VR headset. Upon opening the Guardian’s 6x9 app on your Android or iOS smartphone you will have the choice to view it using a headset or just on your phone. If you choose the latter option then you can move the phone around and as you do the image on the screen will move around to reveal a 360 image. This is often called “magic window”. You will not get the intended full immersive experience – however, we recommend viewing 6x9 via a headset if possible. Underworld can currently only be experienced through a Daydream-ready phone with a Daydream View headset.
+                </p>
+            </li>
+            <li class="gvr-cols__item">
+                <h3>I don’t have a smartphone. Can I still experience 6x9 and Underworld?</h3>
+                <p>
+                    Yes. You can watch 6x9 on your computer as a 360-degree video. While you’re watching, click and drag around the video to see a 360 degree view. For Underworld, go to Subterranean London [LINK HERE], our interactive on the history of the sewers.  
+                </p>
+            </li>
+        </ul>
+        </div>
     </div>
 </div>
