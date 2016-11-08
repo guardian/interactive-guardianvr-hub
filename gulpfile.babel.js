@@ -87,12 +87,12 @@ gulp.task('clean', () => del(buildDir));
 
 gulp.task('build:css', () => {
     return gulp.src('src/css/*.scss')
-        .pipe(template({path}))
         .pipe(sourcemaps.init())
         .pipe(sass({
             'outputStyle': isDeploy ? 'compressed' : 'expanded'
         }).on('error', sass.logError))
         .pipe(sourcemaps.write('.'))
+        .pipe(template({path}))
         .pipe(gulp.dest(buildDir));
 });
 
