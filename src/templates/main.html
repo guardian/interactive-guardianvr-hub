@@ -1,6 +1,9 @@
 <div class="gvr-header">
     <div class="gvr-header__background">
-        <video src="<%= path %>/assets/header_video.mp4" autoplay muted></video>
+        <video poster="<%= path %>/assets/poster.jpg" class="gvr-header__video" muted>
+            <source src="<%= path %>/assets/header_video.webm" type="video/webm">
+            <source src="<%= path %>/assets/header_video.mp4" type="video/mp4">
+        </video>
     </div>
     <div class="gvr-header__inner">
         <div class="gvr-header__text">
