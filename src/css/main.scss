@@ -29,6 +29,9 @@ button{
     @include f-sans;
     display: inline-block;
     cursor:pointer;
+    &:hover{
+        text-decoration: underline;
+    }
 }
 
 h2 {
@@ -188,6 +191,10 @@ h2 {
             right:0;
             background:rgba(255,255,255,0.5)
         }
+        .gvr-vr__extras__right li > a{
+            background:#333;
+            color:#fff;
+        }
     }
 
     &.gvr-strip--underworld {
@@ -204,11 +211,14 @@ h2 {
     &.gvr-strip--about {
         color: white;
         background-color: #b81b66;
-        @include mq(desktop) {
+        
             background-image: url('<%= path %>/assets/headset_face.png');
-            background-size: auto 70%;
+            background-size: 80% auto;
             background-position: left bottom;
             background-repeat: no-repeat;
+        
+        @include mq(desktop) {
+            background-size: auto 70%;
         }
         h3{
             font-size:21px;
@@ -359,6 +369,9 @@ h2 {
             margin-right:280px;
         }
     }
+    @include mq(leftCol){
+        padding-bottom:36px;
+    }
     
 }
 
@@ -383,6 +396,10 @@ h2 {
     overflow: hidden;
     @include mq(tablet){
         margin-top:60px;
+    }
+    a{
+        color:inherit;
+        text-decoration: underline;
     }
 }
 .gvr-reading,

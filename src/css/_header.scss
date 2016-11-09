@@ -51,7 +51,8 @@
     @include f-sans;
     line-height: 1;
     font-weight: 200;
-    font-size: 60px;
+    font-size: 42px;
+    min-height:84px;
     span{
         transition:500ms opacity;
     }
@@ -60,15 +61,18 @@
     }
     @include mq(tablet) {
         font-size: 75px;
+        font-size:60px;
+        min-height:0;
     }
 }
 
 .gvr-header__logo {
     position: absolute;
     top: 20px;
-    width: 60px;
+    width: 42px;
     right: 10px;
     @include mq(tablet) {
         right: 0;
+        width:60px;
     }
 }
