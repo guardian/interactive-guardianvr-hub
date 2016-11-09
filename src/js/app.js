@@ -112,6 +112,15 @@ function animateHeaderText(count){
 	}
 }
 
+// Auto-play header video on desktop
+if (/Mobi/.test(navigator.userAgent) === false) {
+	var videoEl = document.querySelector('.gvr-header__video');
+	if (videoEl) {
+		videoEl.setAttribute('autoplay', true);
+		// videoEl.play();
+	}
+}
+
 setTimeout(function(){
 	animateHeaderText(0);
 },4000)

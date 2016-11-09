@@ -339,6 +339,19 @@ h2 {
     }
 }
 
+.gvr-header__background {
+    background-image: url('<%= path %>/assets/video_poster.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.gvr-header__background video {
+    display: none;
+     @include mq(tablet) {
+         display: block;
+     }
+}
+
 .gvr-content {
     &::before,
     &::after {
