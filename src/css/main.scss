@@ -16,7 +16,7 @@ $gvrPink : #C34A85;
 @import "header";
 @import "vr";
 
-.element-atom {
+.element-atom,.interactive-atom {
     margin: 0 !important;
 }
 button{
@@ -29,6 +29,7 @@ button{
     @include f-sans;
     display: inline-block;
     cursor:pointer;
+    font-size:16px;
     &:hover{
         text-decoration: underline;
     }
@@ -52,7 +53,7 @@ h2 {
      &.gvr-strip--project {
         position: relative;
         .gvr-project--container{
-            min-height:300px; 
+            min-height:240px; 
             max-height:300px;
             overflow: hidden;
             will-change:max-height;
@@ -113,6 +114,10 @@ h2 {
             top:-50px;
             right:0;
             cursor:pointer;
+            background-image: url('<%= path %>/assets/icon_cross.svg');
+            background-size:50%;
+            background-position:center center;
+            background-repeat: no-repeat;
         }
 
         @media(min-width:620px){
@@ -177,9 +182,9 @@ h2 {
     }
 
     &.gvr-strip--6x9 {
-        background-image: url('<%= path %>/assets/project_6x9.png');
+        background-image: url('<%= path %>/assets/project_6x9.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: top center;
         position: relative;
         &:before{
             position: absolute;
@@ -200,6 +205,10 @@ h2 {
     &.gvr-strip--underworld {
         color: white;
         background-color: #333;
+        background-image: url('<%= path %>/assets/project_underworld.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
 
         .gvr-vr__expandbtn{
             background-color:#fff;
@@ -212,10 +221,14 @@ h2 {
         color: white;
         background-color: #b81b66;
         
-            background-image: url('<%= path %>/assets/headset_face.png');
-            background-size: 80% auto;
-            background-position: left bottom;
-            background-repeat: no-repeat;
+        background-image: url('<%= path %>/assets/headset_face.png');
+        background-size: 80% auto;
+        background-position: left bottom;
+        background-repeat: no-repeat;
+
+        h2{
+            margin:0;
+        }
         
         @include mq(desktop) {
             background-size: auto 70%;
@@ -315,6 +328,7 @@ h2 {
     font-weight: 200;
     line-height: 39px;
     font-size: 36px;
+    margin:0;
     @include mq(tablet) {
         font-size: 42px;
         line-height:48px;

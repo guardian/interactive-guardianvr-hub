@@ -42,6 +42,7 @@
 
 .gvr-header__g {
     @include fs-header(4);
+    margin:0;
     & > span {
         color: #7bc4de;
     }
@@ -53,6 +54,7 @@
     font-weight: 200;
     font-size: 42px;
     min-height:84px;
+    margin:0;
     span{
         transition:500ms opacity;
     }
@@ -61,8 +63,10 @@
     }
     @include mq(tablet) {
         font-size: 75px;
-        font-size:60px;
         min-height:0;
+    }
+    @include mq(tablet){
+        font-size:90px;
     }
 }
 
@@ -72,7 +76,7 @@
     width: 42px;
     right: 10px;
     @include mq(tablet) {
-        right: 0;
+        right: 20px;
         width:60px;
     }
 }
