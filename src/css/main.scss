@@ -205,9 +205,9 @@ h2 {
         color: white;
         background-color: #b81b66;
         @include mq(desktop) {
-            background-image: url('<%= path %>/assets/vr.png');
-            background-size: auto 100%;
-            background-position: left center;
+            background-image: url('<%= path %>/assets/headset_face.png');
+            background-size: auto 70%;
+            background-position: left bottom;
             background-repeat: no-repeat;
         }
         h3{
@@ -434,7 +434,7 @@ h2 {
     & > a {
         border-top: 1px solid;
         padding-top:3px;
-        margin-bottom:12px;
+        margin-bottom:18px;
         color:inherit;
         display: inline-block;
         text-decoration: none;
@@ -449,10 +449,12 @@ h2 {
         box-sizing: border-box;
         padding-right: 20px;
         float: left;
+        & > a {
+            min-height:48px;
+        }
     }
     @include mq(leftCol){
-        width:320px;
-        max-width:none;
+        // max-width:none;
         font-size:18px;
         line-height:21px;
         & > a{
@@ -464,9 +466,6 @@ h2 {
 .gvr-about {
     @include mq(desktop) {
         padding-left: 260px;
-    }
-     @include mq(leftCol) {
-        padding-left: 340px;
     }
 }
 

@@ -95,17 +95,39 @@
 }
 
 .gvr-vr__extras__left {
-    @include mq(tablet) {
+    margin-bottom:30px;
+    max-width:720px;
+    @include mq(desktop) {
         float: left;
-        max-width:740px;
-    }
-    @include mq(desktop){
-        max-width:1140px;
+        
     }
 }
 
 .gvr-vr__extras__right {
-    @include mq(tablet) {
-        overflow: hidden;
+    li{
+        border:none;
+        width:100%;
+        max-width:none;
+        float:none;
+        margin-bottom:3px;
+        & > a{
+            border:none;
+            margin:0;
+            width:auto;
+            padding:12px 18px;
+            border-radius:999px;
+            background-color:#fff;
+            color:black;
+            min-height:0;
+            font-size:16px;
+        }
+    }
+    @include mq(desktop) {
+        float:right;
+        max-width:220px;
+    }
+    @include mq(leftCol) {
+        float:right;
+        max-width:300px;
     }
 }

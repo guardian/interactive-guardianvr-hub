@@ -1,10 +1,12 @@
 .gvr-header {
     position: relative;
     color: white;
-    // background-image: url(https://placekitten.com/1000/400);
     background-size: cover;
-    height: 600px;
+    height: 300px;
     overflow: hidden;
+    @media(min-width:620px){
+        height:600px;
+    }
 }
 
 .gvr-header__background{
