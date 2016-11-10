@@ -9,9 +9,6 @@ if(queryString){
 	if(projectHash === "goto-underworld" || projectHash === "goto-6x9"){
 		for(var x=0; x<projectStrips.length; x++){
 			projectStrips[x].classList.remove('gvr-strip--active')
-			
-			console.log(projectEl)
-			
 		}
 		var projectEl = document.querySelector("#" + projectHash);
 		projectEl.classList.add('gvr-strip--active')
@@ -145,9 +142,15 @@ function animateHeaderText(count){
 // Auto-play header video on desktop
 if (/Mobi/.test(navigator.userAgent) === false) {
 	var videoEl = document.querySelector('.gvr-header__video');
+	if(window.innerWidth > 1140){
+		videoEl.querySelectorAll('source')[0].src = "<%= path %>/assets/header_video_hi.webm"
+		videoEl.querySelectorAll('source')[1].src = "<%= path %>/assets/header_video_hi.mp4"
+		videoEl.load();
+	}
+
 	if (videoEl) {
 		videoEl.setAttribute('autoplay', true);
-		// videoEl.play();
+		videoEl.play();
 	}
 }
 
