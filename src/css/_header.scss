@@ -21,7 +21,8 @@
         top:50%;
         left:50%;
         position:absolute;
-        transform:translate(-50%,-50%)
+        transform:translate(-50%,-50%);
+        -webkit-transform:translate(-50%,-50%)
     }
 }
 .gvr-header__inner {
@@ -41,10 +42,15 @@
 }
 
 .gvr-header__g {
-    @include fs-header(4);
     margin:0;
-    & > span {
-        color: #7bc4de;
+    img{
+        height:24px;
+    }
+    @include mq(tablet){
+        img{
+            height:36px;
+        }
+       
     }
 }
 
