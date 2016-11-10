@@ -1,12 +1,42 @@
 
 
+// Jump to page
+var queryString = document.location.hash;
+var projectStrips = document.querySelectorAll('.gvr-strip--project');
+
+if(queryString){
+	var projectHash = queryString.replace('#','');
+	if(projectHash === "goto-underworld" || projectHash === "goto-6x9"){
+		for(var x=0; x<projectStrips.length; x++){
+			projectStrips[x].classList.remove('gvr-strip--active')
+			
+			console.log(projectEl)
+			
+		}
+		var projectEl = document.querySelector("#" + projectHash);
+		projectEl.classList.add('gvr-strip--active')
+	}
+}
+
+if(queryObject.goto){
+	
+
+	
+
+	
+
+	
+}
+
+
+
 
 
 
 
 // Expand and hide projects
 var expandBtns = document.querySelectorAll('.gvr-vr__expandbtn');
-var projectStrips = document.querySelectorAll('.gvr-strip--project');
+
 
 for(var i=0; i<expandBtns.length; i++){
 	expandBtns[i].addEventListener('click',function(e){

@@ -98,10 +98,13 @@
 
 .gvr-vr__extras__left {
     margin-bottom:30px;
-    max-width:720px;
+    max-width:540px;
     @include mq(desktop) {
         float: left;
         
+    }
+    @include mq(leftCol) {
+        max-width:740px;
     }
 }
 
@@ -139,7 +142,7 @@
     }
     @include mq(desktop) {
         float:right;
-        width:220px;
+        width:300px;
     }
     @include mq(leftCol) {
         float:right;

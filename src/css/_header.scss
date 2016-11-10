@@ -39,6 +39,12 @@
 .gvr-header__text {
     display: inline-block;
     vertical-align: middle;
+    @include mq(tablet){
+        margin-top:60px;
+    }
+    @include mq(leftCol){
+        margin-top:0;
+    }
 }
 
 .gvr-header__g {
@@ -69,11 +75,15 @@
     }
     @include mq(tablet) {
         font-size: 75px;
-        min-height:0;
+        min-height:180px;
     }
-    @include mq(tablet){
+    @include mq(desktop){
         font-size:90px;
     }
+    @include mq(leftCol){
+        min-height:0;
+    }
+
 }
 
 .gvr-header__logo {
