@@ -245,9 +245,13 @@ h2 {
         color: white;
         background-color: #333;
         background-image: url('<%= path %>/assets/limbo.jpg');
-        background-size: contain;
+        background-size: cover;
         background-position: top center;
         position: relative;
+
+        &.gvr-strip--active {
+            background-size: contain;
+        }
 
         .gvr-vr__expandbtn{
             background-color:#fff;
@@ -259,6 +263,7 @@ h2 {
             background-color:rgba(255,255,255,0.1);
         }
     }
+    
 
     &.gvr-strip--arctic {
         color: white;

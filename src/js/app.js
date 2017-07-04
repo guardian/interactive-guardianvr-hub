@@ -154,6 +154,8 @@ if (/Mobi/.test(navigator.userAgent) === false) {
 	}
 }
 
+console.log("IN HERE!");
+
 setTimeout(function(){
 	animateHeaderText(0);
 },4000)
