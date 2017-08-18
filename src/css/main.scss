@@ -222,6 +222,91 @@ h2 {
         }
     }
 
+    &.gvr-strip--first-impressions {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/first_impressions_02.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before, .gvr-content::after{
+            background-color:rgba(255,255,255,0.1);
+        }
+    }
+
+    &.gvr-strip--hustle {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/hustle_bg.jpg');
+        background-size: cover;
+        background-position: 0 28%;
+        position: relative;
+
+        &.gvr-strip--active {
+            background-position: 0 0;
+        }
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before, .gvr-content::after{
+            background-color:rgba(255,255,255,0.1);
+        }
+    }
+
+    &.gvr-strip--first-limbo {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/limbo.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+
+        &.gvr-strip--active {
+            background-size: contain;
+        }
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before, .gvr-content::after{
+            background-color:rgba(255,255,255,0.1);
+        }
+    }
+    
+
+    &.gvr-strip--arctic {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/arctic_03.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before, .gvr-content::after{
+            background-color:rgba(255,255,255,0.1);
+        }
+    }
+
     &.gvr-strip--about {
         color: white;
         background-color: #b81b66;

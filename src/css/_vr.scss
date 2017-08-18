@@ -101,7 +101,7 @@
     max-width:540px;
     @include mq(desktop) {
         float: left;
-        
+        min-width: 58%;
     }
     @include mq(leftCol) {
         max-width:740px;
