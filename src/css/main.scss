@@ -23,7 +23,7 @@ $gvrPink : #C34A85;
 button{
     background:#333;
     color:#fff;
-    border:none;    
+    border:none;
     border-radius:999px;
     height:36px;
     outline:none;
@@ -49,17 +49,17 @@ h2 {
 
 .gvr-strip {
     overflow-x: hidden;
-   
+
 
      &.gvr-strip--project {
         position: relative;
         .gvr-project--container{
-            min-height:240px; 
+            min-height:240px;
             max-height:300px;
             overflow: hidden;
             will-change:max-height;
         }
-        
+
         .gvr-vr__extras,.gvr-vr__trailerbtn,.gvr-vr__previewbtn,.gvr-vr__description{
             display:none;
         }
@@ -71,7 +71,7 @@ h2 {
         left:0;
         right:0;
         bottom:0;
-        background:rgba(0,0,0,0.8); 
+        background:rgba(0,0,0,0.8);
 
         .gvr-lightbox__video{
             max-width:300px;
@@ -134,7 +134,7 @@ h2 {
             animation:hideTrailer 200ms linear;
             visibility: hidden;
             opacity:0;
-            
+
         }
     }
     &.gvr-strip--trailerplaying{
@@ -166,7 +166,7 @@ h2 {
         99%{
             visibility: visible;
             opacity:0;
-            
+
         }
         100%{
             visibility: hidden;
@@ -286,7 +286,25 @@ h2 {
             background-color:rgba(255,255,255,0.1);
         }
     }
-    
+
+    &.gvr-strip--seaprayer {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/seaprayerbackground.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+
+        .gvr-vr__expandbtn{
+            background-color:#fff;
+            color:#333;
+            background-image:url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before, .gvr-content::after{
+            background-color:rgba(255,255,255,0.1);
+        }
+    }
 
     &.gvr-strip--arctic {
         color: white;
@@ -310,7 +328,7 @@ h2 {
     &.gvr-strip--about {
         color: white;
         background-color: #b81b66;
-        
+
         background-image: url('<%= path %>/assets/headset_face.png');
         background-size: 80% auto;
         background-position: left bottom;
@@ -319,7 +337,7 @@ h2 {
         h2{
             margin:0;
         }
-        
+
         @include mq(desktop) {
             background-size: auto 70%;
         }
@@ -336,7 +354,7 @@ h2 {
     &.gvr-strip--project.gvr-strip--active{
         .gvr-vr__expandbtn{
             display:none;
-        }  
+        }
         .gvr-vr__extras,.gvr-vr__description{
             display:block;
             // animation: stripReveal 1s linear;
@@ -489,7 +507,7 @@ h2 {
     @include mq(leftCol){
         padding-bottom:36px;
     }
-    
+
 }
 
 .gvr-how__img {
