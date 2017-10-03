@@ -176,7 +176,7 @@ h2 {
 
 
     &.gvr-strip--how {
-        background-color: #44c5e0;
+        background-color: #E3E3E3;
         @include mq(desktop){
             overflow: visible;
         }
@@ -456,6 +456,9 @@ h2 {
     line-height: 39px;
     font-size: 36px;
     margin:0;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #ccc;
     @include mq(tablet) {
         font-size: 42px;
         line-height:48px;
@@ -481,7 +484,7 @@ h2 {
 }
 
 .gvr-header__background {
-    background-image: url('<%= path %>/assets/video_poster.jpg');
+    background-image: url('<%= path %>/assets/bg1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -513,19 +516,59 @@ h2 {
 
 .gvr-how {
     padding-bottom:30px;
-    color:$gvrPurple;
+    color: #000;
     @include f-sans;
     @include mq(tablet){
         padding-bottom:48px;
     }
     @include mq(desktop){
         .gvr-big{
-            margin-right:300px;
+            // margin-right:300px;
         }
     }
     @include mq(leftCol){
         padding-bottom:36px;
     }
+
+}
+
+.gvr-how__asset {
+    width: 33%;
+    display: inline-block;
+    text-align: center;
+    // border-bottom: 1px solid #ccc;
+
+    img {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+}
+
+.phone {
+    width: 85px;
+}
+
+.headset {
+    width: 300px;
+    position: relative;
+    top: 10px;
+    left: 25px;
+
+}
+
+.user {
+    width: 230px;
+
+}
+
+.gvr-how__copy {
+    margin: 0 auto;
+    width: 70%;
+    text-align: left;
+    border-top: solid 1px #ccc;
+    padding-top: 5px;
+    line-height: 1.2;
 
 }
 
@@ -546,6 +589,28 @@ h2 {
         opacity:1;
     }
 }
+
+.gvr-headset {
+    background: #161616;
+}
+
+.headset-copy {
+    color: #fff;
+}
+
+.headset-main-copy {
+    color: #fff;
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.gvr-headset-asset {
+    display: inline-block;
+    width: 500px;
+    float: right;
+}
+
 .faq-container{
     overflow: hidden;
     @include mq(tablet){

@@ -39,6 +39,7 @@
 .gvr-header__text {
     display: inline-block;
     vertical-align: middle;
+    width: 700px;
     @include mq(tablet){
         margin-top:60px;
     }
@@ -67,22 +68,33 @@
     font-size: 42px;
     min-height:84px;
     margin:0;
-    span{
-        transition:500ms opacity;
-    }
-    span.faded{
-        opacity:0;
-    }
+    // span{
+    //     transition:500ms opacity;
+    // }
+    // span.faded{
+    //     opacity:0;
+    // }
     @include mq(tablet) {
-        font-size: 75px;
+        font-size: 50px;
         min-height:180px;
     }
     @include mq(desktop){
-        font-size:90px;
+        font-size:60px;
     }
     @include mq(leftCol){
         min-height:0;
     }
+
+}
+
+.gvr-header__strap {
+    @include f-sans;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top:10px;
+    width: 600px;
+
 
 }
 
