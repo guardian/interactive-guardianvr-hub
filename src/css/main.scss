@@ -192,6 +192,7 @@ h2 {
         background-size: cover;
         background-position: top center;
         position: relative;
+        color: #333;
         &:before {
             position: absolute;
             content: '';
@@ -696,8 +697,14 @@ h2 {
         line-height: 25px;
     }
     strong {
+        color: #626161;
         font-weight: bolder;
     }
+}
+
+.episodes-main-copy {
+    margin-bottom: 60px;
+
 }
 
 .gvr-headset-asset {
@@ -717,8 +724,6 @@ h2 {
 
 .gvr-strip--episodes {
     background: #161616;
-    height: 305px;
-
     @include mq($from: desktop) {
         background-image: url(./assets/episodes.png);
         background-size: contain;

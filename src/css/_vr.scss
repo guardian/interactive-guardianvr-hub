@@ -7,8 +7,8 @@
 .gvr-vr__subtitle {
     // @include f-sans;
     font-family: "Guardian Egyptian Web", Georgia, serif;
-    font-size: 32px;
-    line-height: 1;
+    font-size: 35px;
+    line-height: 1.1;
 
     @include mq($until:desktop){
         font-size:28px;
@@ -70,7 +70,7 @@
     max-width: 420px;
 
     @include mq(leftCol){
-        max-width:620px;
+        max-width:500px;
     }
 }
 
