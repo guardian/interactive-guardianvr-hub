@@ -7,36 +7,76 @@
     </div>
     <div class="gvr-header__inner">
         <div class="gvr-header__text">
-            <h2 class="gvr-header__g">
+            <!--   <h2 class="gvr-header__g">
                 <img src="<%= path %>/assets/theguardianvr.svg" />
-            </h2>
+            </h2> -->
             <h1 class="gvr-header__title">
-                Now everyone can enjoy virtual reality journalism
+                Now everyone can enjoy <span>virtual reality journalism</span>
               <!--   <span>S</span><span>e</span><span>e</span>
                 <span>t</span><span>h</span><span>e</span>
                 <span>w</span><span>o</span><span>r</span><span>l</span><span>d</span> -->
             </h1>
-            <p class="gvr-header__strap">Today, we’re launching our new Guardian VR app. In celebration, we’re giving away free Cardboard VR headsets, in the paper and online. Discover a new world of digital journalism and step inside the story.</p>
+            <!-- <p class="gvr-header__strap">Our free Guardian VR app is now ready to download. To celebrate, we’re giving away free Cardboard VR headsets this Saturday, in the paper and online. Discover a new world of digital journalism and step inside the story.</p> -->
         </div>
-        <!--  <img class="gvr-header__logo" src="<%= path %>/assets/logo.png" /> -->
+        <div class="gvr-header__links">
+            <!-- <h2>Download the app</h2> -->
+            <a href="#">
+                <img class="apple" src="<%= path %>/assets/apple.png" />
+                <p>App Store</p>
+            </a>
+            <a href="#">
+                <img class="google" src="<%= path %>/assets/google.png" />
+                <p>Google Play</p>
+            </a>
+        </div>
+        <img class="gvr-header__logo" src="<%= path %>/assets/logo.svg" />
     </div>
 </div>
+<!-- <div class="gvr-strip gvr-strip--how">
+    <div class="gvr-content gvr-how">
+        <p class="gvr-big">
+            How to experience Guardian VR
+        </p>
+        <div class="asset-wrap">
+            <div class="gvr-how__asset">
+                <img class="phone" src="<%= path %>/assets/app.png" />
+                <p class="gvr-how__copy">Download the Guardian VR app from the App Store or Play Store</p>
+            </div>
+            <div class="gvr-how__asset">
+                <img class="gvr-how__asset headset" src="<%= path %>/assets/cardboard-1.png" />
+                <p class="gvr-how__copy">Place your device in a Google cardboard or Daydream headset</p>
+            </div>
+            <div class="gvr-how__asset">
+                <img class="gvr-how__asset user" src="<%= path %>/assets/user.png" />
+                <p class="gvr-how__copy">You’re ready to explore a new world of guardian journalism</p>
+            </div>
+        </div>
+        <div class="gvr-cf"></div>
+    </div>
+</div> -->
 <div class="gvr-strip gvr-strip--how">
     <div class="gvr-content gvr-how">
         <p class="gvr-big">
             How to experience Guardian VR
         </p>
-        <div class="gvr-how__asset">
-            <img class="phone" src="<%= path %>/assets/app.png" />
-            <p class="gvr-how__copy">Download the Guardian VR app from the Apple App Store or Google Play Store</p>
+         <div class="how-main-copy">
+            <p>Experience a whole new world of Guardian journalism in two simple steps.<br /> 1. Download the Guardian VR app on your smartphone <br /> 2. Place your device in a Google cardboard or Daydream headset <br />You’re now ready to explore a new world of guardian journalism </p>
+            <a href="#"><button class="gvr-vr__topbtn light">Download for iPhone</button></a>
+            <a href="#"><button class="gvr-vr__topbtn light">Download for Andriod</button></a>
         </div>
-        <div class="gvr-how__asset">
-            <img class="gvr-how__asset headset" src="<%= path %>/assets/cardboard-1.png" />
-            <p class="gvr-how__copy">Place your device in a Google cardboard or Daydream headset</p>
-        </div>
-        <div class="gvr-how__asset">
-            <img class="gvr-how__asset user" src="<%= path %>/assets/user.png" />
-            <p class="gvr-how__copy">You’re ready to explore a new world of guardian journalism</p>
+        <div class="asset-wrap">
+            <div class="gvr-how__asset">
+                <img class="phone" src="<%= path %>/assets/how-group.png" />
+                <!-- <p class="gvr-how__copy">1</p> -->
+            </div>
+           <!--  <div class="gvr-how__asset">
+                <img class="gvr-how__asset headset" src="<%= path %>/assets/cardboard-1.png" />
+                <p class="gvr-how__copy">2</p>
+            </div> -->
+           <!--  <div class="gvr-how__asset">
+                <img class="gvr-how__asset user" src="<%= path %>/assets/user.png" />
+                <p class="gvr-how__copy">3</p>
+            </div> -->
         </div>
         <div class="gvr-cf"></div>
     </div>
@@ -44,18 +84,29 @@
 <div class="gvr-strip gvr-strip--headset">
     <div class="gvr-content gvr-headset">
         <p class="gvr-big headset-copy">
-            How to get your VR headset
+            Get your VR headset
         </p>
         <div class="headset-main-copy">
-            <p>You’ll get a VR headset free with today’s paper from selected retailers across the UK. If you can’t get to a retailer, you can register for one of a limited number of headsets available online. Once these have run out, there are more Cardboard VR headsets available to buy.</p>
-            <button class="gvr-vr__expandbtn">Get a free headset</button>
-            <button class="gvr-vr__expandbtn">Retailers</button>
-            <button class="gvr-vr__expandbtn">Buy online</button>
+            <p>You’ll get a VR headset free with this Saturday's paper from selected retailers across the UK. If you can’t get to one of our retailers, you can register for one of a limited number of headsets available online. Once these have run out, there are more Cardboard VR headsets available to buy.</p>
+            <a href="#"><button class="gvr-vr__topbtn dark-button">Get a free headset</button></a>
+            <a href="#"><button class="gvr-vr__topbtn dark-button">Retailers</button></a>
+            <a href="#"><button class="gvr-vr__topbtn dark-button">Buy online</button></a>
         </div>
-        <img class="gvr-headset-asset large-headset" src="<%= path %>/assets/cardboard-2.png" />
+        <img class="gvr-headset-asset large-headset" src="<%= path %>/assets/user.png" />
     </div>
 </div>
-<!--<div class="gvr-strip gvr-strip--project gvr-strip--theparty" id="goto-theparty">
+<div class="gvr-strip gvr-strip--episodes">
+    <div class="gvr-content gvr-episodes">
+        <p class="gvr-big episodes-copy">
+            Step inside the story
+        </p>
+        <div class="episodes-main-copy">
+            <p>Below you can explore the range of our pieces ou’ll get a VR headset free with this Saturday's paper from selected retailers across the UK. If you can’t get to one of our retailers, you can register for one of </p>
+            <a href="#"><button class="gvr-vr__topbtn light">FAQ's</button></a>
+        </div>
+    </div>
+</div>
+<div class="gvr-strip gvr-strip--project gvr-strip--theparty" id="goto-theparty">
     <div class="gvr-content gvr-vr">
         <div class="gvr-project--container">
             <h2 class="gvr-vr__title">The Party</h2>
@@ -66,9 +117,7 @@
             <p class="gvr-vr__description">
                 Everyday situations can be stressful for those on the autism spectrum. Step into the shoes of 16-year-old Layla as she attends a birthday party. Hear her inner thoughts and experience how overwhelming an occasion like this can be for her.
             </p>
-
             <button class="gvr-vr__trailerbtn" data-video="https://youtube.com/embed/LKBNEEY-c3s?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Watch online</button>
-
             <div class="gvr-vr__extras">
                 <div class="gvr-vr__extras__left">
                     <h2>Further material</h2>
@@ -79,7 +128,6 @@
                         <li class="gvr-reading__item">
                             <a href="https://www.theguardian.com/society/2016/oct/21/m-in-the-middle-girls-autism-publish-novel-limpsfield-grange">School girls with autism share experiences</a>
                         </li>
-
                     </ul>
                 </div>
                 <div class="gvr-vr__extras__right">
@@ -92,115 +140,115 @@
                 </div>
             </div>
         </div>
-    </div>-->
-<div class="gvr-strip gvr-strip--project gvr-strip--crimescene" id="goto-seaprayer">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Crime Scene</h2>
-            <h3 class="gvr-vr__subtitle">
+    </div>
+    <div class="gvr-strip gvr-strip--project gvr-strip--crimescene" id="goto-seaprayer">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Crime Scene</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual experience of a forensic investigation
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                It's 2am, there has been a murder and you are the trainee forensic officer on duty. Can you gather the right evidence to solve the killing? A crime scene manager will guide you through the process....
-            </p>
-            <!--<button class="gvr-vr__trailerbtn" data-video="">Watch trailer</button>-->
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/science/2017/oct/02/dna-in-the-dock-how-flawed-techniques-send-innocent-people-to-prison">DNA in the dock: how flawed techniques send innocent people to prison</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    It's 2am, there has been a murder and you are the trainee forensic officer on duty. Can you gather the right evidence to solve the killing? A crime scene manager will guide you through the process....
+                </p>
+                <!--<button class="gvr-vr__trailerbtn" data-video="">Watch trailer</button>-->
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/science/2017/oct/02/dna-in-the-dock-how-flawed-techniques-send-innocent-people-to-prison">DNA in the dock: how flawed techniques send innocent people to prison</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
             </div>
-            <div class="gvr-lightbox__close"></div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--seaprayer" id="goto-seaprayer">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Sea Prayer</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--seaprayer" id="goto-seaprayer">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Sea Prayer</h2>
+                <h3 class="gvr-vr__subtitle">
                 A 360 film by Khaled Hosseini
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                Inspired by the story of Alan Kurdi, the three-year-old Syrian refugee who drowned in the Mediterranean Sea, Khaled Hosseini, the novelist and UNHCR Goodwill Ambassador, has written an exclusive story brought to life in virtual reality. The night before a potentially fatal journey, a father reflects with his son on their life in Syria before the war – and on their unknown future
-            </p>
-            <button class="gvr-vr__trailerbtn" data-video="https://youtube.com/embed/LKBNEEY-c3s?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Watch online</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/refugees">The Guardian's refugee coverage</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/series/the-new-arrivals">The New Arrivals: A long term project following the lives of refugees
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    Inspired by the story of Alan Kurdi, the three-year-old Syrian refugee who drowned in the Mediterranean Sea, Khaled Hosseini, the novelist and UNHCR Goodwill Ambassador, has written an exclusive story brought to life in virtual reality. The night before a potentially fatal journey, a father reflects with his son on their life in Syria before the war – and on their unknown future
+                </p>
+                <button class="gvr-vr__trailerbtn" data-video="https://youtube.com/embed/LKBNEEY-c3s?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Watch online</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/refugees">The Guardian's refugee coverage</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/series/the-new-arrivals">The New Arrivals: A long term project following the lives of refugees
 as they settle across Europe</a>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="gvr-vr__extras__right">
+            </div>
+        </div>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
+            </div>
+        </div>
+    </div>
+    <div class="gvr-strip gvr-strip--project gvr-strip--hustle" id="goto-hustle">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Beat the Hustler</h2>
+                <h3 class="gvr-vr__subtitle">
+                A virtual experience of a<br>street con
+            </h3>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    Pit your wits against a wily street hustler (played by Dan Skinner) in the heart of the City of London. But be on your guard – they say you always win your first game, always lose your second. You'll need all your powers of observation and concentration to come out on top...
+                </p>
+                <!-- <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6k7em">Watch now</button> -->
+                <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6qx2b2">Watch trailer</button>
+             <!--    <div class="gvr-vr__extras__right">
                     <h2>Download the app</h2>
                     <ul class="gvr-reading">
                         <li class="gvr-reading__item">
                             <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
                         </li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
-            </div>
-            <div class="gvr-lightbox__close"></div>
-        </div>
-    </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--hustle" id="goto-hustle">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Beat the Hustler</h2>
-            <h3 class="gvr-vr__subtitle">
-                A virtual experience of a<br>street con
-            </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                Pit your wits against a wily street hustler (played by Dan Skinner) in the heart of the City of London. But be on your guard – they say you always win your first game, always lose your second. You'll need all your powers of observation and concentration to come out on top...
-            </p>
-            <!-- <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6k7em">Watch now</button> -->
-            <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6qx2b2">Watch trailer</button>
-            <div class="gvr-vr__extras__right">
-                <h2>Download the app</h2>
-                <ul class="gvr-reading">
-                    <li class="gvr-reading__item">
-                        <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                    </li>
-                </ul>
-            </div>
-            <!--
+                </div> -->
+                <!--
             <div class="gvr-vr__extras">
                 <div class="gvr-vr__extras__left">
                     <h2>Further material</h2>
@@ -229,252 +277,252 @@ as they settle across Europe</a>
                 </div>
             </div>
             -->
+            </div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--first-limbo" id="goto-first-limbo">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Limbo</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--first-limbo" id="goto-first-limbo">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Limbo</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual experience of waiting for asylum
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                There are approximately 31,500 asylum seekers in the UK waiting for a decision about their asylum status. This film allows you to experience what it is like to live in this period of limbo, waiting for a decision that will affect the rest of your life.
-            </p>
-            <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6k7em">Watch now</button>
-            <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6m8a2">Watch trailer</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/series/the-new-arrivals">The New Arrivals: A long term project following the lives of refugees as they settle across Europe</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/2017/may/03/asylum-seeker-stuck-15-year-limbo-zimbabwe-death">Asylum limbo: the woman who can’t stay in Britain but can’t leave either</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/2017/mar/03/how-you-can-help-refugees-asylum-seekers-britain">How you can help refugees and asylum seekers in Britain</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    There are approximately 31,500 asylum seekers in the UK waiting for a decision about their asylum status. This film allows you to experience what it is like to live in this period of limbo, waiting for a decision that will affect the rest of your life.
+                </p>
+                <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6k7em">Watch now</button>
+                <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/6m8a2">Watch trailer</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/series/the-new-arrivals">The New Arrivals: A long term project following the lives of refugees as they settle across Europe</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/2017/may/03/asylum-seeker-stuck-15-year-limbo-zimbabwe-death">Asylum limbo: the woman who can’t stay in Britain but can’t leave either</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/2017/mar/03/how-you-can-help-refugees-asylum-seekers-britain">How you can help refugees and asylum seekers in Britain</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--first-impressions" id="goto-first-impressions">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">First Impressions</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--first-impressions" id="goto-first-impressions">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">First Impressions</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual experience of the first year of life
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                Using the latest research in neural development and colour vision in infants, this film allows you to experience and interact with the world from the point of view of a baby. It's a period that none of us remember, but is the most crucial stage of our development
-            </p>
-            <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/68ybj">Video trailer</button>
-            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/QKhZYZfq8Zk?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">360 trailer</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://gu.com/p/67kqq">First Impressions: what can babies see? - Science Weekly Podcast</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://gu.com/p/68cjb">The vision thing: how babies colour in the world</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    Using the latest research in neural development and colour vision in infants, this film allows you to experience and interact with the world from the point of view of a baby. It's a period that none of us remember, but is the most crucial stage of our development
+                </p>
+                <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/68ybj">Video trailer</button>
+                <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/QKhZYZfq8Zk?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">360 trailer</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://gu.com/p/67kqq">First Impressions: what can babies see? - Science Weekly Podcast</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://gu.com/p/68cjb">The vision thing: how babies colour in the world</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
             </div>
-            <div class="gvr-lightbox__close"></div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--arctic" id="goto-arctic">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Arctic 360</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--arctic" id="goto-arctic">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Arctic 360</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual experience of a disappearing landscape
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                After years of record temperatures, the Arctic is melting. The Northwest Passage had an ice-free summer in 2016, allowing cruise ships into one of the world’s most remote places. Join our environmentally-friendly Arctic tour, and witness the consequences of human behaviour
-            </p>
-            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/ncEj8rZaQs8?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Watch online</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/environment/2016/dec/22/ice-melting-temperatures-forecast-for-arctic-midwinter">Ice-melting temperatures forecast for Arctic midwinter</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/environment/2016/dec/21/cutting-soot-emissions-arctic-ice-melt-climate-change">Why cutting soot emissions is 'fastest solution' to slowing Arctic ice melt</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    After years of record temperatures, the Arctic is melting. The Northwest Passage had an ice-free summer in 2016, allowing cruise ships into one of the world’s most remote places. Join our environmentally-friendly Arctic tour, and witness the consequences of human behaviour
+                </p>
+                <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/ncEj8rZaQs8?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Watch online</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/environment/2016/dec/22/ice-melting-temperatures-forecast-for-arctic-midwinter">Ice-melting temperatures forecast for Arctic midwinter</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/environment/2016/dec/21/cutting-soot-emissions-arctic-ice-melt-climate-change">Why cutting soot emissions is 'fastest solution' to slowing Arctic ice melt</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
             </div>
-            <div class="gvr-lightbox__close"></div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--6x9" id="goto-6x9">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">6&times;9</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--6x9" id="goto-6x9">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">6&times;9</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual experience of solitary confinement
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                More than 80,000 people are in solitary confinement in the US. They spend 22 to 24 hours a day in their cells, with little to no human contact for days - or even decades. We invite you into this world to hear the stories and experience the psychological damage that can happen during extreme isolation.
-            </p>
-            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/hwbJLlbeAS0?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/ng-interactive/2016/apr/27/you-start-seeing-figures-in-the-paint-chips-recollections-of-life-in-solitary-confinement">Six men and one woman share their experiences of solitary confinement</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/2016/apr/27/what-is-solitary-confinement">Solitary confinement: the facts</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/audio/2016/apr/27/solitary-confinement-in-the-us-audio-documentary">Podcast: 6x9 - a story of solitary confinement by Gary Younge</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/2016/apr/29/albert-woodfox-43-years-solitary-confinement-wish-i-was-back">43 years in solitary: 'There are moments I wish I was back there’</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/us-news/audio/2016/apr/28/solitary-confinement-6x9-the-psychologists-the-story-podcast">Podcast: Psychologists discuss solitary confinement</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/commentisfree/video/2016/may/04/i-was-alone-in-a-room-for-three-years-solitary-confinement-is-torture-video">Video: I was alone in a room for three years. Solitary confinement is torture</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/world/ng-interactive/2016/apr/27/6x9-a-virtual-experience-of-solitary-confinement">Download for iOS, Android or Gear VR</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    More than 80,000 people are in solitary confinement in the US. They spend 22 to 24 hours a day in their cells, with little to no human contact for days - or even decades. We invite you into this world to hear the stories and experience the psychological damage that can happen during extreme isolation.
+                </p>
+                <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/hwbJLlbeAS0?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/ng-interactive/2016/apr/27/you-start-seeing-figures-in-the-paint-chips-recollections-of-life-in-solitary-confinement">Six men and one woman share their experiences of solitary confinement</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/2016/apr/27/what-is-solitary-confinement">Solitary confinement: the facts</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/audio/2016/apr/27/solitary-confinement-in-the-us-audio-documentary">Podcast: 6x9 - a story of solitary confinement by Gary Younge</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/2016/apr/29/albert-woodfox-43-years-solitary-confinement-wish-i-was-back">43 years in solitary: 'There are moments I wish I was back there’</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/us-news/audio/2016/apr/28/solitary-confinement-6x9-the-psychologists-the-story-podcast">Podcast: Psychologists discuss solitary confinement</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/commentisfree/video/2016/may/04/i-was-alone-in-a-room-for-three-years-solitary-confinement-is-torture-video">Video: I was alone in a room for three years. Solitary confinement is torture</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/world/ng-interactive/2016/apr/27/6x9-a-virtual-experience-of-solitary-confinement">Download for iOS, Android or Gear VR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
             </div>
-            <div class="gvr-lightbox__close"></div>
         </div>
     </div>
-</div>
-<div class="gvr-strip gvr-strip--project gvr-strip--underworld" id="goto-underworld">
-    <div class="gvr-content gvr-vr">
-        <div class="gvr-project--container">
-            <h2 class="gvr-vr__title">Underworld</h2>
-            <h3 class="gvr-vr__subtitle">
+    <div class="gvr-strip gvr-strip--project gvr-strip--underworld" id="goto-underworld">
+        <div class="gvr-content gvr-vr">
+            <div class="gvr-project--container">
+                <h2 class="gvr-vr__title">Underworld</h2>
+                <h3 class="gvr-vr__subtitle">
                 A virtual exploration of subterranean London
             </h3>
-            <button class="gvr-vr__expandbtn">Explore</button>
-            <p class="gvr-vr__description">
-                Take a journey through the subterranean labyrinth of London's Victorian sewers with urban explorer and geographer Bradley Garrett. The experience begins below the streets in one of London's lost waterways, the river Fleet, and continues through the blood sewers underneath Smithfield meat market and down to the floodgates of the river Thames.
-            </p>
-            <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/rgQJH9_xgpo?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
-            <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/5amda">Interactive preview</button>
-            <div class="gvr-vr__extras">
-                <div class="gvr-vr__extras__left">
-                    <h2>Further material</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/technology/2016/nov/10/virtual-reality-guide-headsets-apps-games-vr">The complete guide to virtual reality - everything you need to get started</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/culture/audio/2016/nov/10/urban-explorer-and-geographer-dr-bradley-garrett-audio-interview">My life as an urban explorer by Bradley Garrett - podcast</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/cities/gallery/2016/nov/10/what-lies-beneath-londons-sewer-men-at-work-in-pictures">The men who flush the sewers by David Levene -  picture gallery</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/cities/2016/nov/10/urbex-politics-thrills-social-media-new-breed-urban-explorer">Urban exploration: it’s on the rise, and so are risks</a>
-                        </li>
-                        <li class="gvr-reading__item">
-                            <a href="https://www.theguardian.com/cities/2016/nov/10/what-lies-beneath-day-flusher-london-sewers-stephen-moss">Rats, fatbergs and flooding: a day in the life of a sewer technician</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="gvr-vr__extras__right">
-                    <h2>Download the app</h2>
-                    <ul class="gvr-reading">
-                        <li class="gvr-reading__item">
-                            <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
-                        </li>
-                    </ul>
+                <button class="gvr-vr__expandbtn">Explore</button>
+                <p class="gvr-vr__description">
+                    Take a journey through the subterranean labyrinth of London's Victorian sewers with urban explorer and geographer Bradley Garrett. The experience begins below the streets in one of London's lost waterways, the river Fleet, and continues through the blood sewers underneath Smithfield meat market and down to the floodgates of the river Thames.
+                </p>
+                <button class="gvr-vr__trailerbtn" data-video="https://www.youtube.com/embed/rgQJH9_xgpo?autoplay=1&controls=1&modestbranding=1&enablejsapi=1&color=white&showinfo=0&theme=dark&autohide=1&rel=0&iv_load_policy=3&widgetid=1">Video trailer</button>
+                <button class="gvr-vr__previewbtn" data-url="https://gu.com/p/5amda">Interactive preview</button>
+                <div class="gvr-vr__extras">
+                    <div class="gvr-vr__extras__left">
+                        <h2>Further material</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/technology/2016/nov/10/virtual-reality-guide-headsets-apps-games-vr">The complete guide to virtual reality - everything you need to get started</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/culture/audio/2016/nov/10/urban-explorer-and-geographer-dr-bradley-garrett-audio-interview">My life as an urban explorer by Bradley Garrett - podcast</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/cities/gallery/2016/nov/10/what-lies-beneath-londons-sewer-men-at-work-in-pictures">The men who flush the sewers by David Levene -  picture gallery</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/cities/2016/nov/10/urbex-politics-thrills-social-media-new-breed-urban-explorer">Urban exploration: it’s on the rise, and so are risks</a>
+                            </li>
+                            <li class="gvr-reading__item">
+                                <a href="https://www.theguardian.com/cities/2016/nov/10/what-lies-beneath-day-flusher-london-sewers-stephen-moss">Rats, fatbergs and flooding: a day in the life of a sewer technician</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="gvr-vr__extras__right">
+                        <h2>Download the app</h2>
+                        <ul class="gvr-reading">
+                            <li class="gvr-reading__item">
+                                <a href="https://play.google.com/store/apps/details?id=com.guardian.gvr">Download for Daydream</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="gvr-lightbox__container">
-        <div class="gvr-lightbox__video">
-            <div class="gvr-video__container">
-                <iframe allowfullscreen="1" frameborder="0"></iframe>
+        <div class="gvr-lightbox__container">
+            <div class="gvr-lightbox__video">
+                <div class="gvr-video__container">
+                    <iframe allowfullscreen="1" frameborder="0"></iframe>
+                </div>
+                <div class="gvr-lightbox__close"></div>
             </div>
-            <div class="gvr-lightbox__close"></div>
         </div>
     </div>
-</div>
-<!-- <div class="gvr-strip gvr-strip--about">
+    <!-- <div class="gvr-strip gvr-strip--about">
     <div class="gvr-content gvr-about">
         <h2>The Guardian and VR</h2>
         <p class="gvr-big">

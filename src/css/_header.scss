@@ -4,27 +4,28 @@
     background-size: cover;
     height: 300px;
     overflow: hidden;
-    @media(min-width:620px){
-        height:600px;
+    @media(min-width: 620px) {
+        height:500px;
     }
 }
 
-.gvr-header__background{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    video{
-        min-width:100%;
-        min-height:100%;
-        top:50%;
-        left:50%;
-        position:absolute;
-        transform:translate(-50%,-50%);
-        -webkit-transform:translate(-50%,-50%)
+.gvr-header__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%)
     }
 }
+
 .gvr-header__inner {
     font-size: 0;
     height: 100%;
@@ -37,74 +38,112 @@
 }
 
 .gvr-header__text {
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-block; // vertical-align: middle;
     width: 700px;
-    @include mq(tablet){
-        margin-top:60px;
+    @include mq(tablet) {
+        margin-top: 60px;
     }
-    @include mq(leftCol){
-        margin-top:0;
+    @include mq(leftCol) {
+        margin-top: 20px;
     }
 }
 
 .gvr-header__g {
-    margin:0;
-    img{
-        height:24px;
+    margin: 0;
+    img {
+        height: 24px;
     }
-    @include mq(tablet){
-        img{
-            height:36px;
+    @include mq(tablet) {
+        img {
+            height: 30px;
         }
-       
     }
 }
 
 .gvr-header__title {
-    @include f-sans;
-    line-height: 1;
-    font-weight: 200;
-    font-size: 42px;
-    min-height:84px;
-    margin:0;
-    // span{
-    //     transition:500ms opacity;
-    // }
-    // span.faded{
-    //     opacity:0;
-    // }
+    font-family: "Guardian Egyptian Web", Georgia, serif; // @include f-sans;
+    line-height: 1.1;
+    font-weight: bolder;
+    font-size: 4px; // min-height: 84px;
+    margin: 0;
+    span {
+        // color: #43C6E1;
+    }
     @include mq(tablet) {
         font-size: 50px;
-        min-height:180px;
+        min-height: 180px;
     }
-    @include mq(desktop){
-        font-size:60px;
+    @include mq(desktop) {
+        font-size: 50px;
     }
-    @include mq(leftCol){
-        min-height:0;
+    @include mq(leftCol) {
+        min-height: 0;
     }
-
 }
 
 .gvr-header__strap {
-    @include f-sans;
-    font-weight: 200;
-    font-size: 22px;
+    // @include f-sans;
+    // border-bottom: solid 1px rgba(255,255,255,0.3);
+    font-family: "Guardian Egyptian Web", Georgia, serif;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 26px;
-    margin-top:10px;
-    width: 600px;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    width: 480px;
+    color: #ccc;
+}
 
+.gvr-header__links {
+    position: absolute;
+    bottom: 30px;
+    h2 {
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        @include f-sans;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    a {
+        padding: 0 15px;
+        margin-right: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        height: 50px;
 
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+            border: solid .5px rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    img {
+        margin-top: 10px;
+        height: 30px;
+        display: inline-block;
+    }
+    p {
+        position: relative;
+        top: -10px;
+        margin-left: 10px;
+        color: #fff;
+        display: inline-block;
+        @include f-sans;
+        font-weight: 500;
+        font-size: 16px;
+    }
 }
 
 .gvr-header__logo {
     position: absolute;
-    top: 20px;
+    top: 40px;
     width: 42px;
     right: 10px;
     @include mq(tablet) {
         right: 20px;
-        width:60px;
+        width: 60px;
     }
 }
