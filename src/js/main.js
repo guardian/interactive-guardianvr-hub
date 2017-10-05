@@ -80,68 +80,68 @@ for(var i=0; i<previewBtns.length; i++){
 
 
 // Animate header text
-var headerTextContainer = document.querySelector('.gvr-header__title');
+// var headerTextContainer = document.querySelector('.gvr-header__title');
 
-function animateHeaderText(count){
-	var sentences = [
-		"From a different perspective",
-		"Step inside the story"
-	]
-	function fadeOutLetters(){
-		var spans = headerTextContainer.querySelectorAll('span:not(.faded)');
-		var randomNo = Math.round(Math.random()*(spans.length-1))
-		setTimeout(function(){
-			spans[randomNo].className = "faded";
+// function animateHeaderText(count){
+// 	var sentences = [
+// 		"From a different perspective",
+// 		"Step inside the story"
+// 	]
+// 	function fadeOutLetters(){
+// 		var spans = headerTextContainer.querySelectorAll('span:not(.faded)');
+// 		var randomNo = Math.round(Math.random()*(spans.length-1))
+// 		setTimeout(function(){
+// 			spans[randomNo].className = "faded";
 
-			if(spans.length > 1){
-				fadeOutLetters();
-			}else{
-				headerTextContainer.innerHTML = "";
-				for(var k=0; k<sentences[count].length; k++){
-					headerTextContainer.innerHTML += "<span class='faded'>" + sentences[count][k] + '</span>'
-				}
-				fadeInLetters();
-			}
-		},20)
-	}
-	fadeOutLetters();
+// 			if(spans.length > 1){
+// 				fadeOutLetters();
+// 			}else{
+// 				headerTextContainer.innerHTML = "";
+// 				for(var k=0; k<sentences[count].length; k++){
+// 					headerTextContainer.innerHTML += "<span class='faded'>" + sentences[count][k] + '</span>'
+// 				}
+// 				fadeInLetters();
+// 			}
+// 		},20)
+// 	}
+// 	fadeOutLetters();
 
 
-	function fadeInLetters(){
-		var spans = headerTextContainer.querySelectorAll('.faded');
-		var randomNo = Math.round(Math.random()*(spans.length-1))
-		setTimeout(function(){
-			spans[randomNo].className = "";
+// 	function fadeInLetters(){
+// 		var spans = headerTextContainer.querySelectorAll('.faded');
+// 		var randomNo = Math.round(Math.random()*(spans.length-1))
+// 		setTimeout(function(){
+// 			spans[randomNo].className = "";
 
-			if(spans.length > 1){
-				fadeInLetters();
-			}else{
-				if(count === 0){
-					setTimeout(function(){
-						animateHeaderText(1)
-					},4000)
-				}
-			}
-		},20)
-	}
-}
+// 			if(spans.length > 1){
+// 				fadeInLetters();
+// 			}else{
+// 				if(count === 0){
+// 					setTimeout(function(){
+// 						animateHeaderText(1)
+// 					},4000)
+// 				}
+// 			}
+// 		},20)
+// 	}
+// }
 
-// Auto-play header video on desktop
-if (/Mobi/.test(navigator.userAgent) === false) {
-	var videoEl = document.querySelector('.gvr-header__video');
-	var sources = videoEl.querySelectorAll('source');
-	if(window.innerWidth > 1140){
-		sources[0].src = "<%= path %>/assets/header_video_hi.webm";
-		sources[1].src = "<%= path %>/assets/header_video_hi.mp4";
-	} else {
-		sources[0].src = "<%= path %>/assets/header_video.webm";
-		sources[1].src = "<%= path %>/assets/header_video.mp4";
-	}
-	videoEl.load();
-	videoEl.setAttribute('autoplay', true);
-	videoEl.play();
-}
+// // Auto-play header video on desktop
+// if (/Mobi/.test(navigator.userAgent) === false) {
+// 	var videoEl = document.querySelector('.gvr-header__video');
+// 	var sources = videoEl.querySelectorAll('source');
+// 	if(window.innerWidth > 1140){
+// 		sources[0].src = "<%= path %>/assets/header_video_hi.webm";
+// 		sources[1].src = "<%= path %>/assets/header_video_hi.mp4";
+// 	} else {
+// 		sources[0].src = "<%= path %>/assets/header_video.webm";
+// 		sources[1].src = "<%= path %>/assets/header_video.mp4";
+// 	}
+// 	videoEl.load();
+// 	videoEl.setAttribute('autoplay', true);
+// 	videoEl.play();
+// }
 
-setTimeout(function(){
-	animateHeaderText(0);
-},4000)
+// setTimeout(function(){
+// 	animateHeaderText(0);
+// },4000)

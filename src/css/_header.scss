@@ -70,7 +70,7 @@
         }
     }
     @include mq(tablet) {
-         img {
+        img {
             display: block;
         }
     }
@@ -82,14 +82,14 @@
     line-height: 1.05;
     font-size: 40px;
     color: #f6f6f6;
-    width: 700px; 
-   span {
-    color: #43C6E1;
-   }
+    width: 700px;
+    span {
+        color: #43C6E1;
+    }
     @include mq(mobile) {
         font-size: 44px;
         width: 100%;
-        font-weight: 400;
+        font-weight: lighter;
     }
 
     @include mq(tablet) {
@@ -115,9 +115,13 @@
     margin-top: 5px;
     color: #f6f6f6;
     @include mq(mobile) {
+        font-size: 15px;
+        line-height: 25px;
         width: 100%;
     }
     @include mq(tablet) {
+        font-size: 18px;
+        line-height: 27px;
         width: 500px;
     }
 }
