@@ -4,27 +4,33 @@
     background-size: cover;
     height: 300px;
     overflow: hidden;
-    @media(min-width:620px){
-        height:600px;
+    @include mq(tablet) {
+        height: 90vh;
+        min-height: 620px;
+    }
+    @include mq(mobile) {
+        height: auto;
+        padding-bottom: 20px;
     }
 }
 
-.gvr-header__background{
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    video{
-        min-width:100%;
-        min-height:100%;
-        top:50%;
-        left:50%;
-        position:absolute;
-        transform:translate(-50%,-50%);
-        -webkit-transform:translate(-50%,-50%)
+.gvr-header__background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    video {
+        min-width: 100%;
+        min-height: 100%;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%)
     }
 }
+
 .gvr-header__inner {
     font-size: 0;
     height: 100%;
@@ -39,60 +45,138 @@
 .gvr-header__text {
     display: inline-block;
     vertical-align: middle;
-    @include mq(tablet){
-        margin-top:60px;
+
+    @include mq(mobile) {
+        width: 100%;
     }
-    @include mq(leftCol){
-        margin-top:0;
+
+    @include mq(tablet) {
+        margin-top: 100px;
+        width: 700px;
+    }
+    @include mq(leftCol) {
+        margin-top: 120px;
     }
 }
 
 .gvr-header__g {
-    margin:0;
-    img{
-        height:24px;
+    margin: 0;
+    img {
+        height: 30px;
     }
-    @include mq(tablet){
-        img{
-            height:36px;
+    @include mq(mobile) {
+        img {
+            display: none;
         }
-       
+    }
+    @include mq(tablet) {
+        img {
+            display: block;
+        }
     }
 }
 
 .gvr-header__title {
+    // font-family: "Guardian Egyptian Web", Georgia, serif; 
     @include f-sans;
-    line-height: 1;
-    font-weight: 200;
-    font-size: 42px;
-    min-height:84px;
-    margin:0;
-    span{
-        transition:500ms opacity;
+    line-height: 1.05;
+    font-size: 40px;
+    color: #f6f6f6;
+    width: 700px;
+    span {
+        color: #43C6E1;
     }
-    span.faded{
-        opacity:0;
-    }
-    @include mq(tablet) {
-        font-size: 75px;
-        min-height:180px;
-    }
-    @include mq(desktop){
-        font-size:90px;
-    }
-    @include mq(leftCol){
-        min-height:0;
+    @include mq(mobile) {
+        font-size: 44px;
+        width: 100%;
+        font-weight: lighter;
     }
 
+    @include mq(tablet) {
+        font-weight: lighter;
+        width: 700px;
+        font-size: 55px;
+    }
+    @include mq(desktop) {
+        font-size: 70px;
+    }
+    @include mq(leftCol) {
+        min-height: 0;
+    }
+}
+
+.gvr-header__strap {
+    font-family: "Guardian Egyptian Web", Georgia, serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    padding-top: 5px;
+    width: 485px;
+    margin-top: 5px;
+    color: #f6f6f6;
+    @include mq(mobile) {
+        font-size: 15px;
+        line-height: 25px;
+        width: 100%;
+    }
+    @include mq(tablet) {
+        font-size: 18px;
+        line-height: 27px;
+        width: 500px;
+    }
+}
+
+.gvr-header__links {
+    position: absolute;
+    bottom: 30px;
+    h2 {
+        color: #ccc;
+        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+        @include f-sans;
+        font-weight: 400;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    a {
+        padding: 0 15px;
+        margin-right: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        height: 50px;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.5);
+            border: solid .5px rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    img {
+        margin-top: 10px;
+        height: 30px;
+        display: inline-block;
+    }
+    p {
+        position: relative;
+        top: -10px;
+        margin-left: 10px;
+        color: #fff;
+        display: inline-block;
+        @include f-sans;
+        font-weight: 500;
+        font-size: 16px;
+    }
 }
 
 .gvr-header__logo {
     position: absolute;
-    top: 20px;
+    top: 40px;
     width: 42px;
     right: 10px;
     @include mq(tablet) {
         right: 20px;
-        width:60px;
+        width: 60px;
     }
 }

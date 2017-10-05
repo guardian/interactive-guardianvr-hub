@@ -5,16 +5,13 @@
 
 .gvr-vr__title,
 .gvr-vr__subtitle {
-    @include f-sans;
-    font-size: 36px;
-    line-height: 1;
+    // @include f-sans;
+    font-family: "Guardian Egyptian Web", Georgia, serif;
+    font-size: 35px;
+    line-height: 1.1;
 
-    @include mq(tablet){
-        font-size:42px;
-    }
-
-    @include mq(leftCol){
-        font-size:48px;
+    @include mq($until:desktop){
+        font-size:28px;
     }
 }
 .gvr-vr__description{
@@ -54,7 +51,7 @@
 .gvr-vr__previewbtn {
     background:$gvrPink;
     padding:0 18px 0 36px;
-    background-image:url('<%= path %>/assets/icon_tap-white.svg');
+    background-image:url('<%= path %>/assets/icon_play-white.svg');
     background-repeat:no-repeat;
     background-position:12px center;
     margin-top:6px;
@@ -73,7 +70,7 @@
     max-width: 420px;
 
     @include mq(leftCol){
-        max-width:620px;
+        max-width:500px;
     }
 }
 
