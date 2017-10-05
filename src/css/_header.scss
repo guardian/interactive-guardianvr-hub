@@ -6,7 +6,7 @@
     overflow: hidden;
     @include mq(tablet) {
         height: 90vh;
-        min-height: 600px;
+        min-height: 620px;
     }
     @include mq(mobile) {
         height: auto;
@@ -62,7 +62,7 @@
 .gvr-header__g {
     margin: 0;
     img {
-        height: 28px;
+        height: 30px;
     }
     @include mq(mobile) {
         img {
@@ -77,27 +77,28 @@
 }
 
 .gvr-header__title {
-    font-family: "Guardian Egyptian Web", Georgia, serif; 
-    line-height: 1.1;
+    // font-family: "Guardian Egyptian Web", Georgia, serif; 
+    @include f-sans;
+    line-height: 1.05;
     font-size: 40px;
     color: #f6f6f6;
-    width: 650px; 
-    margin: 0;
-    margin-top: 5px;
-   
+    width: 700px; 
+   span {
+    color: #43C6E1;
+   }
     @include mq(mobile) {
-        font-size: 32px;
+        font-size: 44px;
         width: 100%;
-        font-weight: bolder;
+        font-weight: 400;
     }
 
     @include mq(tablet) {
         font-weight: lighter;
-        width: 650px;
+        width: 700px;
         font-size: 55px;
     }
     @include mq(desktop) {
-        font-size: 60px;
+        font-size: 70px;
     }
     @include mq(leftCol) {
         min-height: 0;
@@ -111,7 +112,7 @@
     line-height: 27px;
     padding-top: 5px;
     width: 485px;
-    margin-top: 0px;
+    margin-top: 5px;
     color: #f6f6f6;
     @include mq(mobile) {
         width: 100%;

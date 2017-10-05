@@ -567,8 +567,23 @@ h2 {
     margin-right: 10px;
 }
 
+.gvr-vr__topbtnblue {
+    padding: 0 18px 0 36px;
+    background-image: url(./assets/icon_arrow-black.svg);
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #000;
+    background-color: #43C6E1;
+}
+
 .light {
     background-color: #333;
+}
+
+.blue {
+     background-color: #43C6E1;
 }
 
 .gvr-how {
@@ -682,8 +697,9 @@ h2 {
         line-height: 25px;
     }
     strong {
-        color: #626161;
-        font-weight: bolder;
+        // font-style: italic;
+        // color: #43C6E1;
+        // font-weight: bolder;
     }
 }
 
