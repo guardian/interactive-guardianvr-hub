@@ -64,7 +64,9 @@ for(var i=0; i<stopTrailerBtns.length; i++){
 // Go to immersive
 var previewBtns = document.querySelectorAll('.gvr-vr__previewbtn');
 
+
 for(var i=0; i<previewBtns.length; i++){
+	debugger
 	previewBtns[i].addEventListener('click',function(e){
 		var url = e.target.getAttribute('data-url');
 		document.location = url;
