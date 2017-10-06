@@ -560,7 +560,7 @@ h2 {
     background-color: #161616;
     color: #fff;
     padding: 0 18px 0 36px;
-    background-image: url(./assets/icon_arrow-white.svg);
+    background-image: url('<%= path %>/assets/icon_arrow-white.svg');
     background-repeat: no-repeat;
     background-position: 8px center;
     margin-top: 10px;
@@ -569,7 +569,7 @@ h2 {
 
 .gvr-vr__topbtnblue {
     padding: 0 18px 0 36px;
-    background-image: url(./assets/icon_arrow-black.svg);
+    background-image: url('<%= path %>/icon_arrow-black.svg');
     background-repeat: no-repeat;
     background-position: 8px center;
     margin-top: 10px;
@@ -725,7 +725,7 @@ h2 {
 .gvr-strip--episodes {
     background: #161616;
     @include mq($from: desktop) {
-        background-image: url(./assets/episodes.png);
+        background-image: url('<%= path %>/assets/episodes.png');
         background-size: contain;
         background-position: top right;
         background-repeat: no-repeat;
