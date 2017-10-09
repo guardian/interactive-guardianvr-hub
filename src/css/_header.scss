@@ -4,6 +4,7 @@
     background-size: cover;
     height: 300px;
     overflow: hidden;
+    background-color: #161616;
     @include mq(tablet) {
         height: 90vh;
         min-height: 620px;
