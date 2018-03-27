@@ -317,6 +317,31 @@ h2 {
         }
     }
 
+    &.gvr-strip--frogs {
+        color: white;
+        background-color: #333;
+        background-image: url('<%= path %>/assets/VrHubPageFrogs.jpg');
+        // background-size: contain;
+        background-position: top center;
+        position: relative;
+        background-repeat: no-repeat;
+
+        @include mq($until:desktop) {
+           background-size: cover;
+        }
+
+        .gvr-vr__expandbtn {
+            background-color: #fff;
+            color: #333;
+            background-image: url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        .gvr-content::before,
+        .gvr-content::after {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
     &.gvr-strip--theparty {
         color: white;
         background-color: #333;
