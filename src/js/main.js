@@ -22,18 +22,19 @@ var expandBtns = document.querySelectorAll('.gvr-vr__expandbtn');
 
 for(var i=0; i<expandBtns.length; i++){
 	expandBtns[i].addEventListener('click',function(e){
-		var oldPos = e.target.parentElement.getBoundingClientRect().top;
+		//console.log(e.target);
+		//var oldPos = e.target.parentElement.getBoundingClientRect().top;
 		
 		for(var j=0; j<projectStrips.length; j++){
 			projectStrips[j].classList.remove('gvr-strip--active');
 		}
 
 		e.target.parentElement.parentElement.parentElement.classList.add('gvr-strip--active');
-		var newPos = e.target.parentElement.getBoundingClientRect().top;
-		var diffPos = oldPos - newPos;
-		var currentScroll = document.body.scrollTop;
+		//var newPos = e.target.parentElement.getBoundingClientRect().top;
+		//var diffPos = oldPos - newPos;
+		//var currentScroll = document.body.scrollTop;
 
-		window.scrollTo(0,currentScroll - diffPos)
+		//window.scrollTo(0,currentScroll - diffPos)
 	})
 }
 

@@ -407,6 +407,27 @@ h2 {
         }
     }
 
+    &.gvr-strip--songbird {
+        color: #333;
+        background-color: #fff;
+        background-image: url('<%= path %>/assets/Songbird_16x9.jpg');
+        background-size: cover;
+        background-position: top center;
+        position: relative;
+
+        .gvr-vr__expandbtn {
+            background-color: #fff;
+            color: #333;
+            background-image: url('<%= path %>/assets/icon_plus-black.svg')
+        }
+
+        
+        .gvr-content::before,
+        .gvr-content::after {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    }
+
     &.gvr-strip--arctic {
         color: white;
         background-color: #333;

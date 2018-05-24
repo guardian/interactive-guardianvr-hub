@@ -37,6 +37,7 @@ var expandBtns = document.querySelectorAll('.gvr-vr__expandbtn');
 
 for(var i=0; i<expandBtns.length; i++){
 	expandBtns[i].addEventListener('click',function(e){
+		console.log(e.target);
 		var oldPos = e.target.parentElement.getBoundingClientRect().top;
 		for(var j=0; j<projectStrips.length; j++){
 			projectStrips[j].classList.remove('gvr-strip--active');
